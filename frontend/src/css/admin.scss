@@ -1,0 +1,39 @@
+.mpara { 
+    display: flex;
+    justify-content: center;
+        .btn{
+        margin: 1rem;
+        border-radius: $br;
+    }
+}
+
+.update-menu {
+    display: flex;
+    justify-content: center;
+    border-radius: $br;
+    padding: 1rem;
+    background-color: $black;
+    form{
+        width: 50%;
+        text-align: center;
+    }
+    input{
+        border-radius: $br;
+        margin: 0.5rem;
+    }
+}
+
+.image-update-form {
+    border: 1px solid $bg;
+    border-radius: $br;
+    margin-top: 2rem;
+    padding: 1rem;
+    input {
+        margin: auto;
+        width: 50%;
+    }
+    button {
+        border-radius: $br;
+        margin-top: 0.5rem;
+    }
+}

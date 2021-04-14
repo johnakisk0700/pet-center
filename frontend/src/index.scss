@@ -1,0 +1,320 @@
+$red: #BE1E2D;
+$black: #011627;
+$lightB: #01162733;
+$bg: #FAFFF8;
+$hShadow: #2F2F2F;
+$sShadow: #8a8a8a;
+$br: 13px;
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import 'css/desktop-menu';
+@import 'css/burger.scss';
+@import 'css/mob-menu.scss';
+@import 'css/admin.scss';
+@import 'css/loader.scss';
+
+
+@font-face {
+  font-family: VAG;
+  src: url('./fonts/VAG-HandWritten.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: $bg;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+input {
+  text-align: center;
+  }
+
+.page-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.content-container {
+  padding-bottom: 5rem;
+  padding-top: 3.5rem;
+}
+
+.header-text {
+  display: none;
+}
+
+.logo {
+  max-height: 10.6rem;
+  cursor: pointer;
+}
+
+.footer {
+  height: 4rem;
+  background-color: $black;
+  color: white;
+  border-radius: 12px 12px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.erwthsh-text {
+  font-family: 'VAG';
+  font-size: 3rem;
+  text-align: center;
+}
+
+.decor-img-wrapper img {
+  width: 50%;
+  max-width: 100px;
+}
+
+.zwaki {
+  color: $black;
+  height: 12rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover img,
+  &:active img {
+    transform: scale(1.05);
+  }
+
+  &:hover .zwaki-img-wrapper,
+  &:active .zwaki-img-wrapper {
+    background-color: $black;
+  }
+}
+
+.zwaki-title {
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.zwaki-img-wrapper {
+  display: block;
+  width: 70%;
+  height: 15rem;
+  max-height: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: solid 0.2rem $black;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 0.15s ease;
+}
+
+.zwaki img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 90%;
+  max-height: 100%;
+  transition: 0.08s ease-in-out;
+}
+
+.ad {
+  text-align: center;
+}
+
+.ad img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* Εδώ για το ραουτερομενού */
+.menu-rect {
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  border: solid 1px #afafaf;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.1s;
+
+  &:hover,
+  &:active {
+    color: $red;
+    border: 1px solid $red;
+    background-color: white;
+    box-shadow: 0 0 1px $red;
+  }
+}
+
+.dont-break {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.image-wrapper-menu {
+  max-height: 60%;
+  margin-top: 5%;
+}
+
+.image-wrapper-menu img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.product {
+  background-color: $bg;
+  text-align: center;
+  min-height: 18rem;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  overflow: hidden;
+  .card-subtitle {
+    color: $sShadow;
+  }
+  &:hover,
+  &:active {
+    border: 1px solid $red;
+    background-color: white;
+    box-shadow: 0 0 1px $red;
+    .card-title {
+      transition: 0.15s;
+      color: $red;
+    }
+  }
+}
+
+.xarths {
+  display: flex;
+  a{
+    display: block;
+    color: $black;
+    text-decoration: none;
+    margin: 0.2rem;
+    border-radius: 13px;
+    padding: 0.5rem;
+    &:hover{
+      color: $bg;
+      background-color: $black;
+    }
+  }
+}
+.xarths-wrapper {
+  display: flex;
+  word-break: break-all;
+}
+.product-title h3{
+  padding: 0.5rem 1.5rem;
+  border-bottom: solid 1px rgb(209, 209, 209);
+}
+.velaki{
+  display: block;
+  color: $black;
+  text-decoration: none;
+  margin: 0.7rem;
+}
+.product-expanded {
+  border: solid 1px #f9f9f9;
+  box-shadow: 0 0 4px #efefef;
+  background-color: white;
+  border-radius: 13px;
+  margin: 0.5rem;
+  overflow: hidden;
+  color: grey;
+  i{
+    color: $black;
+  }
+  h3 {
+    color: $black;
+  }
+}
+.colors {
+  display: flex;
+  div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.product-sizes {
+  list-style: none;
+}
+.card-img-top { 
+  height: 10rem;
+  object-fit: contain;
+}
+.image-gallery {
+  margin-top: 2rem;
+}
+.image-gallery-slide {
+  height: 18rem;
+  object-fit: cover;
+  img{
+    max-height: 18rem!important;
+  }
+}
+.image-gallery-thumbnail-image {
+  height: 4rem;
+  object-fit: cover;
+}
+.image-gallery-svg {
+  height: 4rem!important;
+  width: 2rem!important;
+}
+.image-gallery-fullscreen-button {
+  padding: 1rem;
+}
+.fullscreen .image-gallery-slide {
+  height: calc(100vh - 6rem)!important;
+  img{
+    max-height: calc(100vh - 6rem)!important;
+  }
+}
+.image-gallery-thumbnail, .image-gallery-thumbnail, .image-gallery-thumbnail{
+  overflow: hidden;
+  border-radius: $br;
+}
+.image-gallery-thumbnail.active, .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus{
+  border-radius: $br;
+}
+/* Εδώ για το ραουτερομενού */
+
+@media (max-width: 1199px) {
+  .content-container {
+    padding-bottom: 5rem;
+    padding-top: 13vh !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .ad {
+    height: 40vh;
+  }
+}

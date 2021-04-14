@@ -1,0 +1,122 @@
+.header {
+  background-color: $black;
+  box-shadow: 0 4px 6px $hShadow;
+  color: white;
+  border-radius: 0 0 12px 12px;
+  max-height: 12rem;
+}
+
+.ts-navbar {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: $black;
+  box-shadow: 0 4px 6px $hShadow;
+  border: 0.1rem solid white;
+  max-width: 1400px;
+  border-radius: 13px;
+}
+
+.ts-navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 11px;
+  padding: 0.4rem 2rem;
+}
+
+.menu-item:hover {
+  background: $red;
+  cursor: pointer;
+}
+
+.menu-icon {
+  max-height: 1.8rem;
+  margin-right: 0.2rem;
+}
+
+.pouli img {
+  max-height: 1.7rem;
+  margin-top: 0.1rem;
+}
+
+/*Εδώ για το μενού από πάνω*/
+.dropdownmenu-wrapper {
+  position: absolute;
+  top: 1.9rem;
+  z-index: 2;
+}
+
+.subdropdownmenu-wrapper {
+  position: absolute;
+  right: -100%;
+  min-width: 100%;
+  z-index: 2;
+  transform: translateY(-2.3rem);
+}
+
+.dropdownmenu {
+  background-color: $black;
+  border-radius: 14px;
+}
+
+.subdropdownmenu {
+  background-color: $black;
+  border-radius: 14px;
+  right: -2%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.subdropdownmenu a {
+  color: white;
+  border-radius: 13px;
+  padding: 0.8rem;
+  text-decoration: none;
+}
+
+.subdropdownmenu a:hover {
+  background-color: $red;
+}
+
+.dropdowncategory {
+  padding: 0.8rem;
+  border-radius: 13px;
+
+  &:hover {
+    background-color: $red;
+  }
+
+  &:hover .arrow-wrapper {
+    right: 0.1rem;
+  }
+}
+
+.arrow-wrapper {
+  width: 0.8rem;
+  position: absolute;
+  transition: 0.1s;
+  right: 0.3rem;
+}
+
+.arrow {
+  height: 100%;
+}
+@media (min-width: 768px){
+  .image-gallery-icon:hover {
+    color: $red;
+  }
+}
+/*Εδώ για το μενού από πάνω*/

@@ -1,0 +1,131 @@
+.mob-header {
+  background-color: $black;
+  box-shadow: 0 0px 5px $hShadow;
+  color: white;
+  min-height: 52px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 6;
+}
+
+.mob-logo {
+  border-radius: 12px;
+  cursor: pointer;
+  max-height: 12vh;
+  transition: 0.2s;
+}
+
+/*Εδώ για το mobile menu*/
+.mob-menu-wrapper {
+  background: $black;
+  box-shadow: 0 0px 5px $hShadow;
+  color: white;
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 100%;
+  max-height: 100vh;
+  overflow: scroll;
+  z-index: 5;
+  text-decoration: none;
+}
+.mob-menu a{
+    text-decoration: none;
+}
+.mob-menu-item {
+  border-radius: 10px;
+
+  color: white;
+
+  &:active {
+    background: $red;
+  }
+}
+
+.mob-arrow-wrapper {
+  height: 0.8rem;
+  transition: 0.2s;
+  transform: translateX(0.4rem);
+}
+
+/*Animation του transition*/
+.mob-dropdown-enter {
+  transform: translateY(-110%);
+}
+
+.mob-dropdown-enter-active {
+  transform: translateY(0);
+  transition: transform 180ms;
+}
+
+.mob-dropdown-exit {
+  transform: translateY(0);
+}
+
+.mob-dropdown-exit-active {
+  transform: translateY(-110%);
+  transition: transform 180ms;
+}
+
+.mob-header-dropdown-enter {
+  transform: translateY(-110%);
+}
+
+.mob-header-dropdown-enter-active {
+  transform: translateY(0);
+  transition: transform 180ms;
+}
+
+.mob-header-dropdown-exit {
+  transform: translateY(0);
+}
+
+.mob-header-dropdown-exit-active {
+  transform: translateY(-110%);
+  transition: transform 180ms;
+}
+
+/*Animation του transition*/
+.markes-filter {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  background-color: $black;
+  z-index: 10;
+  text-align: center;
+  transition: all 200ms ease;
+  button{
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: $br;
+  }
+}
+@media (max-width: 480px) {
+  .markes-filter {
+    width: 100%;
+  }
+}
+.markes-wrapper {
+  height: calc(100% - 7.5rem);
+  overflow: scroll;
+}
+.markes-button {
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  z-index: 10;
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  top: 14vh;
+  right: 0;
+  padding: 0.4rem 0.7rem;
+  background-color: $black;
+  color: white;
+  border-radius: $br 0 0 $br;
+}
+/*Εδώ για το mobile menu*/
