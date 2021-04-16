@@ -3,8 +3,9 @@ $black: #011627;
 $lightB: #01162733;
 $bg: #FAFFF8;
 $hShadow: #2F2F2F;
-$sShadow: #8a8a8a;
+$sShadow: #cccbcb;
 $br: 13px;
+$grey: #747474;
 @import "~react-image-gallery/styles/scss/image-gallery.scss";
 @import 'css/desktop-menu';
 @import 'css/burger.scss';
@@ -48,7 +49,7 @@ input {
 }
 
 .content-container {
-  padding-bottom: 5rem;
+  padding-bottom: 20rem;
   padding-top: 3.5rem;
 }
 
@@ -62,7 +63,8 @@ input {
 }
 
 .footer {
-  height: 4rem;
+  display: grid;
+  grid-template-columns: 49% 2% 49%;
   background-color: $black;
   color: white;
   border-radius: 12px 12px 0 0;
@@ -139,14 +141,15 @@ input {
   transition: 0.08s ease-in-out;
 }
 
-.ad {
-  text-align: center;
+.ad-wrapperino {
+  margin: auto;
+  margin-bottom: 3rem;
+  width: 60vw;
 }
-
-.ad img {
-  max-height: 100%;
-  max-width: 100%;
-  border-radius: 12px;
+@media (max-width: 1200px){
+  .ad-wrapperino{
+    width: 100%;
+  }
 }
 
 /* Εδώ για το ραουτερομενού */
@@ -157,14 +160,11 @@ input {
   border: solid 1px #afafaf;
   border-radius: 12px;
   cursor: pointer;
-  transition: 0.1s;
-
   &:hover,
   &:active {
     color: $red;
-    border: 1px solid $red;
+    border: 1px solid $hShadow;
     background-color: white;
-    box-shadow: 0 0 1px $red;
   }
 }
 
@@ -190,27 +190,28 @@ input {
 .product {
   background-color: $bg;
   text-align: center;
-  min-height: 18rem;
+  height: 18rem;
+  width: 12rem;
   margin-bottom: 15px;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.15s;
   overflow: hidden;
+  text-overflow: ellipsis;
   .card-subtitle {
     color: $sShadow;
   }
   &:hover,
   &:active {
-    border: 1px solid $red;
+    border: 1px solid $black;
     background-color: white;
-    box-shadow: 0 0 1px $red;
     .card-title {
-      transition: 0.15s;
       color: $red;
+    }
+    .card-subtitle{
+      color: $grey;
     }
   }
 }
-
 .xarths {
   display: flex;
   a{
@@ -221,14 +222,19 @@ input {
     border-radius: 13px;
     padding: 0.5rem;
     &:hover{
-      color: $bg;
-      background-color: $black;
+      color: $red;
     }
   }
 }
 .xarths-wrapper {
   display: flex;
-  word-break: break-all;
+  word-break: ellipsis;
+  overflow: hidden;
+  a{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 .product-title h3{
   padding: 0.5rem 1.5rem;
@@ -270,6 +276,43 @@ input {
   height: 10rem;
   object-fit: contain;
 }
+.pagination {
+  display: flex;
+  grid-column: 2;
+  justify-self: center;
+  div{
+    padding: 0.5rem 0.8rem;
+    margin: 0 0.2rem;
+    border-radius: $br;
+    cursor: pointer;
+    &:hover,
+    &:focus{
+      background-color: $black;
+      box-shadow: 0 3px 4px $hShadow;
+      color: white;
+    }
+  }
+}
+.pagination-active {
+  background-color: $black;
+  box-shadow: 0 3px 4px $hShadow;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .image-gallery {
   margin-top: 2rem;
 }
@@ -303,7 +346,328 @@ input {
 }
 .image-gallery-thumbnail.active, .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus{
   border-radius: $br;
+  border: 4px solid $red;
 }
+// kai edw to periergo checkbox
+.inputGroup, .inputGroupRed, .inputGroupBlue, .inputGroupTeal, .inputGroupPurple, .inputGroupOrange,
+.inputGroupLGreen, .inputGroupViolet, .inputGroupGray, .inputGroupPink, .inputGroupLime, .inputGroupBrown, .inputGroupBlack {
+  background-color: #fff;
+  margin: 10px auto;
+  position: relative;
+  font-family: 'Fira Sans', sans-serif;
+  max-width: 95%;
+  border-radius: $br;
+
+  label {
+    border-radius: 12px;
+    padding: 12px 30px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    color: #3C454C;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 200ms ease-in;
+    overflow: hidden;
+
+    &:before {
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      content: '';
+      background-color: $black;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale3d(1, 1, 1);
+      transition: all 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &:after {
+      width: 32px;
+      height: 32px;
+      content: '';
+      border: 2px solid #D1D7DC;
+      background-color: #fff;
+      background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+      background-repeat: no-repeat;
+      background-position: 2px 3px;
+      border-radius: 50%;
+      z-index: 2;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 200ms ease-in;
+    }
+  }
+
+  input:checked ~ label {
+    color: #fff;
+
+    &:before {
+      transform: translate(-50%, -50%) scale3d(11, 11, 1);
+      opacity: 1;
+    }
+
+    &:after {
+      background-color: $red;
+      border-color: $red;
+    }
+  }
+
+  input {
+    width: 32px;
+    height: 32px;
+    order: 1;
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    visibility: hidden;
+  }
+}
+.inputGroupDesk, .inputGroupDeskRed, .inputGroupDeskBlue, .inputGroupDeskTeal, .inputGroupDeskPurple, .inputGroupDeskOrange,
+.inputGroupDeskLGreen, .inputGroupDeskViolet, .inputGroupDeskGray, .inputGroupDeskPink, .inputGroupDeskLime, .inputGroupDeskBrown, .inputGroupDeskBlack {
+  background-color: #fff;
+  margin: 10px auto;
+  position: relative;
+  font-family: 'Fira Sans', sans-serif;
+  max-width: 95%;
+  border-radius: $br;
+
+  label {
+    border-radius: 12px;
+    padding: 12px 10px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    color: #3C454C;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 200ms ease-in;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:before {
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      content: '';
+      background-color: $black;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale3d(1, 1, 1);
+      transition: all 120ms cubic-bezier(0.8, 0.0, 0.1, 1.2);
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &:after {
+      width: 16px;
+      height: 16px;
+      content: '';
+      border: 2px solid #D1D7DC;
+      background-color: #fff;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      z-index: 2;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 120ms ease-in-out;
+    }
+  }
+
+  input:checked ~ label {
+    color: #fff;
+
+    &:before {
+      transform: translate(-50%, -50%) scale3d(11, 11, 1);
+      opacity: 1;
+    }
+
+    &:after {
+      background-color: $red;
+      border-color: $red;
+    }
+  }
+
+  input {
+    width: 32px;
+    height: 32px;
+    order: 1;
+    z-index: 2;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    visibility: hidden;
+  }
+}
+.inputGroupRed, .inputGroupDeskRed {
+  label{
+    &:before{
+      background-color: $red; 
+    }
+  }
+}
+.inputGroupBlack, .inputGroupDeskBlack {
+  label{
+    &:before{
+      background-color: $black; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: $black;
+      border-color: $black;
+    }
+  }
+}
+.inputGroupBlue, .inputGroupDeskBlue {
+  label{
+    &:before{
+      background-color: blue; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: blue;
+      border-color: blue;
+    }
+  }
+}
+.inputGroupTeal, .inputGroupDeskTeal {
+  label{
+    &:before{
+      background-color: teal; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: teal;
+      border-color: teal;
+    }
+  }
+}
+.inputGroupPurple, .inputGroupDeskPurple {
+  label{
+    &:before{
+      background-color: purple; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: purple;
+      border-color: purple;
+    }
+  }
+}
+.inputGroupOrange, .inputGroupDeskOrange {
+  label{
+    &:before{
+      background-color: orange; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: orange;
+      border-color: orange;
+    }
+  }
+}
+.inputGroupLGreen, .inputGroupDeskLGreen {
+  label{
+    &:before{
+      background-color: lightgreen; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: lightgreen;
+      border-color: lightgreen;
+    }
+  }
+}
+.inputGroupViolet, .inputGroupDeskViolet {
+  label{
+    &:before{
+      background-color: Violet; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: violet;
+      border-color: violet;
+    }
+  }
+}
+.inputGroupGray, .inputGroupDeskGray {
+  label{
+    &:before{
+      background-color: gray; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: gray;
+      border-color: gray;
+    }
+  }
+}
+.inputGroupPink, .inputGroupDeskPink {
+  label{
+    &:before{
+      background-color: pink; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: pink;
+      border-color: pink;
+    }
+  }
+}
+.inputGroupBrown, .inputGroupDeskBrown {
+  label{
+    &:before{
+      background-color: brown; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: brown;
+      border-color: brown;
+    }
+  }
+}
+.inputGroupLime, .inputGroupDeskLime {
+  label{
+    &:before{
+      background-color: lime; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: lime;
+      border-color: lime;
+    }
+  }
+}
+
 /* Εδώ για το ραουτερομενού */
 
 @media (max-width: 1199px) {
@@ -312,9 +676,12 @@ input {
     padding-top: 13vh !important;
   }
 }
-
-@media (min-width: 992px) {
-  .ad {
-    height: 40vh;
+@media (max-width: 768px){
+  .image-gallery-thumbnail.active, .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus{
+    border-radius: $br;
+    border: 3px solid $red;
+  }
+  .product {
+    width: auto;
   }
 }

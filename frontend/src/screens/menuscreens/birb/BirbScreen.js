@@ -7,7 +7,6 @@ const BirbScreen = () => {
     return (
         <div>
             <Row className='justify-content-center'><h3>Πτηνά</h3></Row>
-            <Row className='justify-content-center'>Και μερικές μαλακίες για τα πτηνά</Row>
             <Row className='justify-content-center my-4'>
                 <MenuRect title='Τροφές' img='/menu-photos/birb/birb-food.jpg' url={`${url}/trofes/proionta`} />
                 <MenuRect title='Κλουβιά' img='/menu-photos/birb/klouvia.jpg' url={`${url}/klouvia/proionta`} />

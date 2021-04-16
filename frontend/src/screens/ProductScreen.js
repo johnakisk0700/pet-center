@@ -101,6 +101,18 @@ const ProductScreen = ({match}) => {
                 case 'ygeia':
                     map.category = 'Είδη Υγιεινής'
                 break
+                case 'travelcage':
+                    map.category = 'Cage Μεταφοράς'
+                break
+                case 'terrarium':
+                    map.category = 'Terrarium'
+                break
+                case 'symplhrwmata':
+                    map.category = 'Συμπληρώματα Διατροφής'
+                break
+                case 'aksesouar':
+                    map.category = 'Αξεσουάρ'
+                break
             }
             switch(map.subcategory){
                 case 'kshra':

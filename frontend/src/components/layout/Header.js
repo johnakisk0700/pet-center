@@ -27,7 +27,7 @@ const Header = () => {
     return (
 
 
-            <div>    
+            <>    
                     {isTablet && <>
                         <CSSTransition
                         in={!isDrop}
@@ -97,7 +97,7 @@ const Header = () => {
                     </Container>
                     </>
                     }
-            </div>         
+            </>         
     )
 }
 

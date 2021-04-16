@@ -7,7 +7,6 @@ const RodentScreen = () => {
     return (
         <div>
             <Row className='justify-content-center'><h3>Τρωκτικά</h3></Row>
-            <Row className='justify-content-center'>Και μερικές μαλακίες για τα τρωκτικά</Row>
             <Row className='justify-content-center my-4'>
                 <MenuRect title='Τροφές' img='/menu-photos/rodent/rodent-food.jpg' url={`${url}/trofes/proionta`} />
                 <MenuRect title='Μπωλ' img='/menu-photos/cat/mpwl.jpg' url={`${url}/mpwl/proionta`} />

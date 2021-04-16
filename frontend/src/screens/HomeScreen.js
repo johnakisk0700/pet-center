@@ -3,10 +3,10 @@ import Diafhmish from '../components/Diafhmhsh';
 
 const HomeScreen = () => {
     return (
-        <div>
-            <Diafhmish />
+        <>
+            <div className='ad-wrapperino'><Diafhmish /></div>
             <Zwakia />
-        </div>
+        </>
     )
 }
 

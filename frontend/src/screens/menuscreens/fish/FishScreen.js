@@ -8,7 +8,6 @@ const FishScreen = () => {
     return (
         <div>
             <Row className='justify-content-center'><h3>Ψάρι</h3></Row>
-            <Row className='justify-content-center'>Και μερικές μαλακίες για το ψάρι</Row>
             <Row className='justify-content-center my-4'>
                 <MenuRect title='Τροφές' img='/menu-photos/fish/fish-food.jpg' url={`${url}/trofes/proionta`} />
                 <MenuRect title='Ενυδρεία' img='/menu-photos/fish/enydreia.jpg' url={`${url}/enydreia/proionta`} />

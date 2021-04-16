@@ -84,7 +84,7 @@ const ProductForm = ({tokenValue}) => {
                             <option value='xtenesampouan'>Χτένες - Σαμπουάν</option>
                             <option value='ygeia'>Είδη Υγιεινής</option>
                             <option value='travelcage'>Cage Μεταφοράς</option>
-                            <option value='accessories'>Αξεσουάρ</option>
+                            <option value='aksesouar'>Αξεσουάρ</option>
                             <option disabled style={{color: 'black', fontWeight: '800'}}>Σκυλογάτα</option>
                             <option value='kokkala'>Κόκκαλα</option>
                             <option value='onyxodromia'>Ονυχοδρόμια</option>

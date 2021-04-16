@@ -12,6 +12,7 @@ import DogFoodScreen from './screens/menuscreens/dog/DogFoodScreen'
 import FishScreen from './screens/menuscreens/fish/FishScreen'
 import RodentScreen from './screens/menuscreens/rodent/RodentScreen'
 import BirbScreen from './screens/menuscreens/birb/BirbScreen'
+import CrawlerScreen from './screens/menuscreens/crawler/CrawlerScreen'
 import ProductsScreen from './screens/ProductsScreen'
 import AdminScreen from './screens/AdminScreen'
 import ProductScreen from './screens/ProductScreen'
@@ -32,6 +33,7 @@ function App() {
               <Route path='/psari' component={FishScreen} exact />
               <Route path='/trwktiko' component={RodentScreen} exact />
               <Route path='/pthno' component={BirbScreen} exact />
+              <Route path='/erpeto' component={CrawlerScreen} exact />
               <Route path='/:animal/:category/proionta' component={ProductsScreen} exact/>
               <Route path='/:animal/:category/:subcategory/proionta' component={ProductsScreen} exact/>
               <Route path='/:animal/:category/:subcategory/:brand/proionta' component={ProductsScreen} exact/>

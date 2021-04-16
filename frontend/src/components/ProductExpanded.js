@@ -2,7 +2,6 @@ import { Row, Col } from 'react-bootstrap'
 import ImageGallery from 'react-image-gallery'
 import { useEffect, useState } from 'react'
 const ProductExpanded = ({product}) => {
-    console.log(process.env.REACT_APP_ENA_VAR)
     const myImages = [] 
     product.images.forEach((image) => myImages.push({original: `${process.env.REACT_APP_API_URL}${image}`, thumbnail: `${process.env.REACT_APP_API_URL}${image}`}))
     const sizes = product.size[0].split(';')
@@ -70,7 +69,7 @@ const ProductExpanded = ({product}) => {
                     </ul>
                 {product.colors && <> 
                     <i>Χρώματα:</i>
-                    <Row xs={2} className='m-0'> 
+                    <Row xs={2} className='m-0 mb-3'> 
                         {product.colors.map((color, i) => {
                         if(i % 2 !== 0){
                             return (

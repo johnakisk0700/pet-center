@@ -6,16 +6,12 @@ const CrawlerScreen = () => {
     let { url } = useRouteMatch();
     return (
         <div>
-            <Row className='justify-content-center'><h3>Γάτα</h3></Row>
-            <Row className='justify-content-center'>Και μερικές μαλακίες για τη γάτα</Row>
+            <Row className='justify-content-center'><h3>Ερπετό</h3></Row>
             <Row className='justify-content-center my-4'>
-                <MenuRect title='Τροφές' img='/menu-photos/crawler/crawler-food.png' url={`${url}/trofes`} />
-                <MenuRect title='' img='/menu-photos/crawler/.jpg' url={`${url}/`} />
-                <MenuRect title='' img='/menu-photos/crawler/.jpg' url={`${url}/`} />
-                <MenuRect title='' img='/menu-photos/crawler/.jpg' url={`${url}/paixnidia`} />
-                <MenuRect title='' img='/menu-photos/crawler/.jpg' url={`${url}/mpwl`} />
-                <MenuRect title='' img='/menu-photos/crawler/.jpg' url={`${url}/louria`} />
-                <MenuRect title='' img='/menu-photos/crawler/.jpg' url={`${url}/xtenesampouan`} />
+                <MenuRect title='Τροφές' img='/menu-photos/crawler/crawler-food.jpg' url={`${url}/trofes/proionta`} />
+                <MenuRect title='Terrarium' img='/menu-photos/crawler/terrarium.jpg' url={`${url}/terrarium/proionta`} />
+                <MenuRect title='Συμπληρώματα Διατροφής' img='/menu-photos/crawler/symplhrwmata.jpg' url={`${url}/symplhrwmata/proionta`} />
+                <MenuRect title='Αξεσουάρ' img='/menu-photos/crawler/diakosmhtika.jpg' url={`${url}/aksesouar/proionta`} />
             </Row>
             
         </div>
