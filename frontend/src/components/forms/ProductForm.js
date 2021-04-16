@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import { Col, Form, Button } from 'react-bootstrap'
 import axios from 'axios'
+import Loader from '../Loader'
 
 
 const ProductForm = ({tokenValue}) => {
@@ -9,6 +10,7 @@ const ProductForm = ({tokenValue}) => {
     const [ isFood, setIsFood ] = useState(false)
     const [ isGenericSize, setIsGenericSize ] = useState(false)
     const [ hasColors, setHasColors ] = useState(false)
+    const [ loading, setLoading ] = useState(false)
     let config = {
         headers: {
           Authorization: `Bearer ${tokenValue}`
@@ -26,7 +28,7 @@ const ProductForm = ({tokenValue}) => {
         for (let i = 0 ; i < data.images.length ; i++) {
             imgFormData.append("images", data.images[i]);
         }
-        console.log(imgFormData)
+        setLoading(true)
         await axios.post(`${process.env.REACT_APP_API_URL}api/admin/addimg`, imgFormData, config2)
         .then (res => {
             alert(JSON.stringify(res.data))
@@ -43,6 +45,7 @@ const ProductForm = ({tokenValue}) => {
         .catch(err => {
             alert(err)
         })
+        setLoading(false)
     }
 
     function checkForSub(e) {
@@ -159,7 +162,7 @@ const ProductForm = ({tokenValue}) => {
                         <Form.Label>Περιγραφή</Form.Label>
                         <Form.Control as='textarea' rows={4} name='description' ref={register} style={{margin: 'auto', borderRadius: '13px', width: '90%'}} />
                         <Form.File name="images" ref={register} multiple style={{margin: 'auto', borderRadius: '13px'}}/>
-                        <Button variant='info' type="submit" className='mt-4' style={{width: '30%', margin: 'auto', borderRadius: '13px'}}>Καταχώρηση</Button>
+                        <Button variant='info' type="submit" className='mt-4' style={{width: '30%', margin: 'auto', borderRadius: '13px'}}>{loading ? <Loader /> : 'Καταχώρηση'}</Button>
                     </Form>
                 </Col>
         </>

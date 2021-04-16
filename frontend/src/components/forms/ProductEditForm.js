@@ -27,7 +27,7 @@ const ProductForm = ({tokenValue, preloadedData}) => {
       }  
     const updateProduct = async (data) => {
         setLoader(true)
-        await axios.put('http://localhost:5000/api/admin/upd', data, config)
+        await axios.put(`${process.env.REACT_APP_API_URL}api/admin/upd`, data, config)
         .then (res => {
             console.log(data)
             alert(JSON.stringify(res.data))
