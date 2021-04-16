@@ -51,6 +51,10 @@ const ColorFilter = ({filterByColor, setColorFilterComp, isActive}) => {
             <div className="inputGroupBrown">
                 <input id="option12" name="option12" type="checkbox" value='brown' onChange={filterByColor} />
                 <label htmlFor="option12">Καφέ</label>
+            </div>
+            <div className="inputGroupSkyBlue">
+                <input id="option13" name="option13" type="checkbox" value='LightSkyBlue' onChange={filterByColor} />
+                <label htmlFor="option13">Γαλάζιο</label>
             </div>                 
         </div>
         <Button variant='danger' onClick={() => setColorFilterComp(false)}>Επιβεβαίωση</Button>

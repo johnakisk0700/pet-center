@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
-import { Col, Form, Button } from 'react-bootstrap'
+import { Col, Form, Button, Row } from 'react-bootstrap'
 import axios from 'axios'
 import Loader from '../Loader'
 
@@ -91,6 +91,8 @@ const ProductForm = ({tokenValue}) => {
                             <option disabled style={{color: 'black', fontWeight: '800'}}>Σκυλογάτα</option>
                             <option value='kokkala'>Κόκκαλα</option>
                             <option value='onyxodromia'>Ονυχοδρόμια</option>
+                            <option value='krevatia'>Κρεβάτια</option>
+                            <option value='lekanes'>Λεκάνες</option>
                             <option disabled style={{color: 'black', fontWeight: '800'}}>Ψάρια</option>
                             <option value='enydreia'>Ενυδρεία</option>
                             <option value='eksoplismos'>Εξοπλισμός Ενυδρείου</option>
@@ -140,22 +142,28 @@ const ProductForm = ({tokenValue}) => {
                         </>}
                         <Button onClick={() => setHasColors(!hasColors)} style={{margin: 'auto', borderRadius: '13px', width: '30%'}}>Χρώματα</Button>
                         {hasColors && <> 
-                            <div className='justify-content-center pb-3'>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="black" label='black'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="white" label='white'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="red" label='red'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="blue" label='blue'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="teal" label='tblue'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="yellow" label='yellow'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="purple" label='purple'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="orange" label='orange'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="lightgreen" label='lgreen'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="violet" label='violet'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="grey" label='grey'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="pink" label='pink'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="brown" label='brown'/>
-                                <Form.Check  name='colors[]' ref={register} type="checkbox" value="lime" label='lime'/>
-                                
+                            <div className='pb-3'>
+                            <Row xs={2}>
+                                    <Col>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="black" label='black'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="white" label='white'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="red" label='red'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="blue" label='blue'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="teal" label='tblue'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="yellow" label='yellow'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="purple" label='purple'/>
+                                    </Col>
+                                    <Col>    
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="orange" label='orange'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="lightgreen" label='lgreen'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="violet" label='violet'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="grey" label='grey'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="pink" label='pink'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="brown" label='brown'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="lime" label='lime'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="LightSkyBlue" label='LightSkyBlue'/>
+                                    </Col>
+                                </Row>
 
                             </div>
                         </>}

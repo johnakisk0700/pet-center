@@ -168,6 +168,12 @@ const ProductScreen = ({match}) => {
                 case 'aksesouar':
                     map.category = 'Αξεσουάρ'
                 break
+                case 'krevatia':
+                    map.category = 'Κρεβάτια'
+                break
+                case 'lekanes':
+                    map.category = 'Λεκάνες'
+                break
             }
             switch(map.subcategory){
                 case 'kshra':

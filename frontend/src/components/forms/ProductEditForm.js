@@ -132,6 +132,8 @@ const ProductForm = ({tokenValue, preloadedData}) => {
                             <option disabled style={{color: 'black', fontWeight: '800'}}>Σκυλογάτα</option>
                             <option value='kokkala'>Κόκκαλα</option>
                             <option value='onyxodromia'>Ονυχοδρόμια</option>
+                            <option value='krevatia'>Κρεβάτια</option>
+                            <option value='lekanes'>Λεκάνες</option>
                             <option disabled style={{color: 'black', fontWeight: '800'}}>Ψάρια</option>
                             <option value='enydreia'>Ενυδρεία</option>
                             <option value='eksoplismos'>Εξοπλισμός Ενυδρείου</option>
@@ -200,6 +202,7 @@ const ProductForm = ({tokenValue, preloadedData}) => {
                                         <Form.Check  name='colors[]' ref={register} type="checkbox" value="pink" label='pink'/>
                                         <Form.Check  name='colors[]' ref={register} type="checkbox" value="brown" label='brown'/>
                                         <Form.Check  name='colors[]' ref={register} type="checkbox" value="lime" label='lime'/>
+                                        <Form.Check  name='colors[]' ref={register} type="checkbox" value="LightSkyBlue" label='LightSkyBlue'/>
                                     </Col>
                                 </Row>
 

@@ -48,6 +48,12 @@ const ProductExpanded = ({product}) => {
                     case 'brown':
                         colors[i] = 'Καφέ'
                     break
+                    case 'LightSkyBlue':
+                        colors[i] = 'Γαλάζιο'
+                    break
+                    case 'white':
+                        colors[i] = 'Άσπρο'
+                    break
                 }
             })
             setXrwmata(colors)

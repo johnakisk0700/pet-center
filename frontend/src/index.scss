@@ -49,7 +49,7 @@ input {
 }
 
 .content-container {
-  padding-bottom: 20rem;
+  padding-bottom: 28rem;
   padding-top: 3.5rem;
 }
 
@@ -142,9 +142,10 @@ input {
 }
 
 .ad-wrapperino {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 3rem;
-  width: 60vw;
+  width: 70%;
 }
 @media (max-width: 1200px){
   .ad-wrapperino{
@@ -350,7 +351,7 @@ input {
 }
 // kai edw to periergo checkbox
 .inputGroup, .inputGroupRed, .inputGroupBlue, .inputGroupTeal, .inputGroupPurple, .inputGroupOrange,
-.inputGroupLGreen, .inputGroupViolet, .inputGroupGray, .inputGroupPink, .inputGroupLime, .inputGroupBrown, .inputGroupBlack {
+.inputGroupLGreen, .inputGroupViolet, .inputGroupGray, .inputGroupPink, .inputGroupLime, .inputGroupBrown, .inputGroupBlack, .inputGroupSkyBlue {
   background-color: #fff;
   margin: 10px auto;
   position: relative;
@@ -434,7 +435,7 @@ input {
   }
 }
 .inputGroupDesk, .inputGroupDeskRed, .inputGroupDeskBlue, .inputGroupDeskTeal, .inputGroupDeskPurple, .inputGroupDeskOrange,
-.inputGroupDeskLGreen, .inputGroupDeskViolet, .inputGroupDeskGray, .inputGroupDeskPink, .inputGroupDeskLime, .inputGroupDeskBrown, .inputGroupDeskBlack {
+.inputGroupDeskLGreen, .inputGroupDeskViolet, .inputGroupDeskGray, .inputGroupDeskPink, .inputGroupDeskLime, .inputGroupDeskBrown, .inputGroupDeskBlack, .inputGroupDeskSkyBlue {
   background-color: #fff;
   margin: 10px auto;
   position: relative;
@@ -664,6 +665,19 @@ input {
     &:after{
       background-color: lime;
       border-color: lime;
+    }
+  }
+}
+.inputGroupDeskSkyBlue, .inputGroupSkyBlue {
+  label{
+    &:before{
+      background-color: lightskyblue; 
+    }
+  }
+  input:checked ~ label {
+    &:after{
+      background-color: lightskyblue;
+      border-color: lightskyblue;
     }
   }
 }

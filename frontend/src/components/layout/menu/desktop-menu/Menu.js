@@ -29,8 +29,10 @@ const Menu = (props) => {
                         <Category title='Παιχνίδια' url='/gata/paixnidia/proionta'/>
                         <Category title='Μπωλ' url='/gata/mpwl/proionta'/>
                         <Category title='Λουριά' url='/gata/louria/proionta'/>
+                        <Category title='Cage Μεταφοράς' url='/gata/travelcage/proionta' />
+                        <Category title='Κρεβάτια' url='/gata/krevatia/proionta' />
+                        <Category title='Λεκάνες' url='/gata/lekanes/proionta' />
                         <Category title='Χτένες - Σαμπουάν' url='/gata/xtenesampouan/proionta'/>
-
                     </DropdownMenu>
                 </MenuItem>
                 <MenuItem title='Σκύλος' icon={Dog} url='/skylos'>
@@ -46,6 +48,8 @@ const Menu = (props) => {
                         <Category title='Παιχνίδια' url='/skylos/paixnidia/proionta'/>
                         <Category title='Μπωλ' url='/skylos/mpwl/proionta'/>
                         <Category title='Λουριά' url='/skylos/louria/proionta'/>
+                        <Category title='Cage Μεταφοράς' url='/skylos/travelcage/proionta' />
+                        <Category title='Κρεβάτια' url='/skylos/krevatia/proionta' />
                         <Category title='Χτένες - Σαμπουάν' url='/skylos/xtenesampouan/proionta'/>
 
                     </DropdownMenu>
@@ -77,10 +81,16 @@ const Menu = (props) => {
                         <Category title='Κλουβιά' url='/trwktiko/klouvia/proionta'/>
                         <Category title='Υποστρώματα' url='/trwktiko/ypostrwmata/proionta'/>
                         <Category title='Είδη Υγιεινής' url='/trwktiko/ygeia/proionta'/>
+                        <Category title='Αξεσουάρ' url='/trwktiko/aksesouar/proionta' />
                     </DropdownMenu>
                 </MenuItem>
                 <MenuItem title='Ερπετό' icon={Turtle} url='/erpeto'>
-
+                    <DropdownMenu>
+                        <Category title='Τροφές' url='/erpeto/trofes/proionta'/>
+                        <Category title='Terrarium' url='/erpeto/terrarium/proionta'/>
+                        <Category title='Συμπληρώματα Διατροφής' url='/erpeto/symplhrwmata/proionta'/>
+                        <Category title='Αξεσουάρ' url='/erpeto/aksesouar/proionta'/>
+                    </DropdownMenu>
                 </MenuItem>
             </ul>
         </nav>

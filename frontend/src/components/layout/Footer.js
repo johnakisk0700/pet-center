@@ -1,9 +1,9 @@
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <footer>
-            <div className='footer'>
+        <>
+            <Container className='footer'>
                     <div className='text-center py-3'> 
                         <h6>Πληροφορίες Καταστήματος</h6>
                         <div><i>Τηλ.</i> : 2613-027682</div> 
@@ -21,8 +21,8 @@ const Footer = () => {
                         <div><i>Σαβ.</i> : 9:00-15:00</div>
                         <div><i>Κυρ.</i> : <i>Κλειστά</i></div>
                     </div>
-            </div>
-        </footer>
+            </Container>
+        </>
     )
 }
 
