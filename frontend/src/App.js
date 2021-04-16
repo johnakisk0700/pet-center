@@ -16,11 +16,12 @@ import CrawlerScreen from './screens/menuscreens/crawler/CrawlerScreen'
 import ProductsScreen from './screens/ProductsScreen'
 import AdminScreen from './screens/AdminScreen'
 import ProductScreen from './screens/ProductScreen'
-
+import ScrollToTop from './components/ScrollToTop'
 function App() {
   return (
     <Router>  
       <div className='page-container'>
+        <ScrollToTop />
         {window.location.pathname !== '/adminerino' ? <Header /> : null}
           <div className='content-container'>
           <Route path='/adminerino' component={AdminScreen} exact />

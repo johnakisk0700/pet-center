@@ -75,12 +75,12 @@ const Header = () => {
                             </Col>
                             <Col xs={12}>
                                 <MobMenu >
-                                    <Link to='/gata' onClick={() => setIsDrop(!isDrop)}><MobMenuItem title='Γάτα' icon={Cat}/></Link>
-                                    <Link to='/skylos' onClick={() => setIsDrop(!isDrop)}><MobMenuItem title='Σκύλος' icon={Dog} /></Link>
-                                    <Link to='/pthno' onClick={() => setIsDrop(!isDrop)}><MobMenuItem title='Πτηνό' icon={Bird} /></Link>
-                                    <Link to='/psari' onClick={() => setIsDrop(!isDrop)}><MobMenuItem title='Ψάρι' icon={Fish} /></Link>
-                                    <Link to='/trwktiko' onClick={() => setIsDrop(!isDrop)}><MobMenuItem title='Τρωκτικό' icon={Rabbit} /></Link>
-                                    <Link to='/erpeto' onClick={() => setIsDrop(!isDrop)}><MobMenuItem title='Ερπετό' icon={Turtle} /></Link>
+                                    <Link to='/gata' onClick={() => setIsDrop(false)}><MobMenuItem title='Γάτα' icon={Cat}/></Link>
+                                    <Link to='/skylos' onClick={() => setIsDrop(false)}><MobMenuItem title='Σκύλος' icon={Dog} /></Link>
+                                    <Link to='/pthno' onClick={() => setIsDrop(false)}><MobMenuItem title='Πτηνό' icon={Bird} /></Link>
+                                    <Link to='/psari' onClick={() => setIsDrop(false)}><MobMenuItem title='Ψάρι' icon={Fish} /></Link>
+                                    <Link to='/trwktiko' onClick={() => setIsDrop(false)}><MobMenuItem title='Τρωκτικό' icon={Rabbit} /></Link>
+                                    <Link to='/erpeto' onClick={() => setIsDrop(false)}><MobMenuItem title='Ερπετό' icon={Turtle} /></Link>
                                 </MobMenu>
                             </Col>
                         </Row>
