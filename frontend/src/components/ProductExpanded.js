@@ -80,7 +80,7 @@ const ProductExpanded = ({product}) => {
                         if(i % 2 !== 0){
                             return (
                                 <div className='mb-1 mt-1 colors'> 
-                                    <div key={color + i} style={{backgroundColor: `${color}`, minWidth: '1.5rem', height: '1.5rem', borderRadius: '50%', marginRight: '0.4rem', marginLeft: '0.1rem', padding: '0.5rem'}} />
+                                    <div key={color + i} style={{backgroundColor: `${color}`, minWidth: '1.5rem', height: '1.5rem', borderRadius: '50%', marginRight: '0.4rem', marginLeft: '0.1rem', padding: '0.5rem', border: `${color==='white'? '1px solid grey' : ''}`}} />
                                     <div>{xrwmata[i]}</div>
                                 </div>
                             )
@@ -88,7 +88,7 @@ const ProductExpanded = ({product}) => {
                             return (
                                 <div className='mb-1 mt-1 colors justify-content-end'>
                                     <div>{xrwmata[i]}</div> 
-                                    <div key={color + i} style={{backgroundColor: `${color}`, minWidth: '1.5rem', height: '1.5rem', borderRadius: '50%', marginLeft: '0.4rem', marginRight: '0.1rem'}} />  
+                                    <div key={color + i} style={{backgroundColor: `${color}`, minWidth: '1.5rem', height: '1.5rem', borderRadius: '50%', marginLeft: '0.4rem', marginRight: '0.1rem', border: `${color==='white'? '1px solid grey' : ''}`}} />  
                                 </div>
                             )
                         }
