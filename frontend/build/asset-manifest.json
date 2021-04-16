@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a0d9898.chunk.css",
-    "main.js": "/static/js/main.423492d6.chunk.js",
-    "main.js.map": "/static/js/main.423492d6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.94da898a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.94da898a.js.map",
-    "static/js/2.8b4862e6.chunk.js": "/static/js/2.8b4862e6.chunk.js",
-    "static/js/2.8b4862e6.chunk.js.map": "/static/js/2.8b4862e6.chunk.js.map",
-    "static/js/3.237eb656.chunk.js": "/static/js/3.237eb656.chunk.js",
-    "static/js/3.237eb656.chunk.js.map": "/static/js/3.237eb656.chunk.js.map",
+    "main.css": "/static/css/main.6bb39c10.chunk.css",
+    "main.js": "/static/js/main.1404340b.chunk.js",
+    "main.js.map": "/static/js/main.1404340b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4ec63f51.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4ec63f51.js.map",
+    "static/css/2.b2381999.chunk.css": "/static/css/2.b2381999.chunk.css",
+    "static/js/2.35fa97b8.chunk.js": "/static/js/2.35fa97b8.chunk.js",
+    "static/js/2.35fa97b8.chunk.js.map": "/static/js/2.35fa97b8.chunk.js.map",
+    "static/js/3.490c089a.chunk.js": "/static/js/3.490c089a.chunk.js",
+    "static/js/3.490c089a.chunk.js.map": "/static/js/3.490c089a.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.6a0d9898.chunk.css.map": "/static/css/main.6a0d9898.chunk.css.map",
-    "static/js/2.8b4862e6.chunk.js.LICENSE.txt": "/static/js/2.8b4862e6.chunk.js.LICENSE.txt",
+    "static/css/2.b2381999.chunk.css.map": "/static/css/2.b2381999.chunk.css.map",
+    "static/css/main.6bb39c10.chunk.css.map": "/static/css/main.6bb39c10.chunk.css.map",
+    "static/js/2.35fa97b8.chunk.js.LICENSE.txt": "/static/js/2.35fa97b8.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/static/media/VAG-HandWritten.1fb3bbd6.otf",
     "static/media/bird.22f73650.svg": "/static/media/bird.22f73650.svg",
     "static/media/cat.6ce8959f.svg": "/static/media/cat.6ce8959f.svg",
@@ -23,9 +25,10 @@
     "static/media/turtle.dc234b72.svg": "/static/media/turtle.dc234b72.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.94da898a.js",
-    "static/js/2.8b4862e6.chunk.js",
-    "static/css/main.6a0d9898.chunk.css",
-    "static/js/main.423492d6.chunk.js"
+    "static/js/runtime-main.4ec63f51.js",
+    "static/css/2.b2381999.chunk.css",
+    "static/js/2.35fa97b8.chunk.js",
+    "static/css/main.6bb39c10.chunk.css",
+    "static/js/main.1404340b.chunk.js"
   ]
 }
