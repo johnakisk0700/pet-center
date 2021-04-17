@@ -114,8 +114,15 @@ const ProductForm = ({tokenValue}) => {
                             <Form.Control as='select' name='marka' ref={register} defaultValue='' style={{margin: 'auto', borderRadius: '13px', width: '40%'}}>
                                 <option disabled hidden value=''>Μάρκες</option>
                                 <option disabled style={{color: 'black', fontWeight: '800'}}>Μάρκες</option>
-                                <option value='Flatazor Pro-Nutrition'>Flatazor Pro-Nutrition</option>
+                                <option value='Flatazor PureLife'>Flatazor PureLife</option>
+                                <option value='Flatazor Prestige'>Flatazor Prestige</option>
                                 <option value='ROYAL CANIN'>ROYAL CANIN</option>
+                                <option value='Dingo'>Dingo</option>
+                                <option value='Natura Diet'>Natura Diet</option>
+                                <option value='Gemon'>Gemon</option>
+                                <option value='Amity'>Amity</option>
+                                <option value="Hill's">Hill's</option>
+
                             </Form.Control>
                             <div className='d-flex justify-content-center pb-3'>
                                 <Form.Check
@@ -132,6 +139,14 @@ const ProductForm = ({tokenValue}) => {
                                 label="Ξηρά"
                                 name="subcategory"
                                 value='kshra'
+                                ref={register}
+                                />
+                                <Form.Check
+                                inline
+                                type="radio"
+                                label="Κλινικές Δίαιτες"
+                                name="subcategory"
+                                value='klinikes'
                                 ref={register}
                                 />
                             </div>

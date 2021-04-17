@@ -22,6 +22,7 @@ const Menu = (props) => {
                             <SubDropdownMenu type='subdropdownmenu-wrapper'>
                                 <Link to='/gata/trofes/kshra/proionta'>Ξηρά Τροφή</Link>
                                 <Link to='/gata/trofes/ygrh/proionta'>Υγρή Τροφή</Link>
+                                <Link to='/gata/trofes/klinikes/proionta'>Κλινικές Δίαιτες</Link>
                             </SubDropdownMenu>
                         </Category>
                         <Category title='Λιχουδιές' url='/gata/lixoudies/proionta'/>
@@ -41,6 +42,7 @@ const Menu = (props) => {
                             <SubDropdownMenu type='subdropdownmenu-wrapper'>
                                 <Link to='/skylos/trofes/kshra/proionta'>Ξηρά Τροφή</Link>
                                 <Link to='/skylos/trofes/ygrh/proionta'>Υγρή Τροφή</Link>
+                                <Link to='/skylos/trofes/klinikes/proionta'>Κλινικές Δίαιτες</Link>
                             </SubDropdownMenu>
                         </Category>
                         <Category title='Λιχουδιές' url='/skylos/lixoudies/proionta'/>

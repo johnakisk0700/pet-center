@@ -4,8 +4,7 @@ import Xarths from '../components/Xarths'
 import ProductExpanded from '../components/ProductExpanded'
 import BigLoader from '../components/BigLoader'
 const ProductScreen = ({match}) => {
-    const [ product, setProduct ] = useState(null)
-    const [ xarths, setXarths ] = useState({})
+    const [ product, setProduct ] = useState({})
     const [ loading, setLoading ] = useState(false)
 
     useEffect(() => {
@@ -21,117 +20,13 @@ const ProductScreen = ({match}) => {
                 console.log(err)   
             )
         }
-        const ftiakseTaLinks = () => {
-            const map = {...match.params}
-            switch(map.animal){
-                case "gata":
-                    map.animal = 'Γάτα'
-                break
-                case 'skylos':
-                    map.animal = 'Σκύλος'
-                break
-                case 'pthno':
-                    map.animal = 'Πτηνό'
-                break
-                case 'psari':
-                    map.animal = 'Ψάρι'
-                break
-                case 'trwktiko':
-                    map.animal = 'Τρωκτικό'
-                break
-                case 'erpeto':
-                    map.animal = 'Ερπετό'
-                break
-            }
-            switch(map.category) {
-                case 'trofes':
-                    map.category = 'Τροφές'
-                break
-                case 'lixoudies':
-                    map.category = 'Λιχουδιές'
-                break
-                case 'onyxodromia':
-                    map.category = 'Ονυχοδρόμια'
-                break
-                case 'paixnidia':
-                    map.category = 'Παιχνίδια'
-                break
-                case 'mpwl':
-                    map.category = 'Μπωλ'
-                break
-                case 'louria':
-                    map.category = 'Λουριά'
-                break
-                case 'xtenesampouan':
-                    map.category = 'Χτένες - Σαμπουάν'
-                break
-                case 'kokkala':
-                    map.category = 'Κόκκαλα'
-                break
-                case 'klouvia':
-                    map.category = 'Κλουβιά'
-                break
-                case 'taistres':
-                    map.category = 'Ταίστρες'
-                break
-                case 'potistres':
-                    map.category = 'Ποτίστρες'
-                break
-                case 'patithres':
-                    map.category = 'Πατήθρες'
-                break
-                case 'patoi':
-                    map.category = 'Πάτοι'
-                break
-                case 'zevgarwma':
-                    map.category = 'Είδη Ζευγαρώματος'
-                break
-                case 'enydreia':
-                    map.category = 'Ενυδρεία'
-                break
-                case 'diakosmhtika':
-                    map.category = 'Διακοσμητικά Ενυδρείου'
-                break
-                case 'eksoplismos':
-                    map.category = 'Εξοπλισμός'
-                break
-                case 'ypostrwmata':
-                    map.category = 'Υποστρώματα'
-                break
-                case 'ygeia':
-                    map.category = 'Είδη Υγιεινής'
-                break
-                case 'travelcage':
-                    map.category = 'Cage Μεταφοράς'
-                break
-                case 'terrarium':
-                    map.category = 'Terrarium'
-                break
-                case 'symplhrwmata':
-                    map.category = 'Συμπληρώματα Διατροφής'
-                break
-                case 'aksesouar':
-                    map.category = 'Αξεσουάρ'
-                break
-            }
-            switch(map.subcategory){
-                case 'kshra':
-                    map.subcategory = 'Ξηρά Τροφή'
-                break
-                case 'ygrh':
-                    map.subcategory = 'Υγρή Τροφή'
-                break
-            }
-            setXarths(map)
-        }
         getProduct()
-        ftiakseTaLinks()
     }, [match])    
 
-    if(product !== null){
+    if(Object.keys(product).length > 0){
         return (
             <>
-                <Xarths match={match} xarths={xarths} />
+                <Xarths match={match} xarths={product} />
                 <ProductExpanded product={product} />
             </>
         )
@@ -139,11 +34,11 @@ const ProductScreen = ({match}) => {
         return(
             <>
             {loading === true && <>
-                <Xarths match={match} xarths={xarths} />
+                <Xarths match={match} xarths={product} />
                 <BigLoader /> 
             </>}
             {loading === false && <> 
-                <Xarths match={match} xarths={xarths} />
+                <Xarths match={match} xarths={product} />
                 <div>Συγνώμη, το προιόν που ζητήσατε δεν υπάρχει.</div>
             </>}
                 

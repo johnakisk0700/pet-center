@@ -4,7 +4,7 @@ import tokenGenerator from '../utils/tokenGenerator.js'
 const authAdmin = asyncHandler(async (req, res) => {
     const {username, password} = req.body
     console.log(req.body)
-    if(username === 'peostifths' && password === 'peos'){
+    if(username === process.env.ADMIN_USER && password === process.env.ADMIN_PASS){
         res.json({
             token: tokenGenerator(password)
         })

@@ -1,17 +1,27 @@
 import { Button } from 'react-bootstrap'
-const MarkesFilter = ({filterFood, setMarkesComp, isActive}) => {
+import { useEffect, useState } from 'react'
+const MarkesFilter = ({filterFood, setMarkesComp, isActive, products}) => {
+    const [ markes, setMarkes ] = useState([])
+    useEffect(() => {
+        let brands = []
+        products.forEach((product)=>{
+        if(brands.indexOf(product.marka) === -1){
+            brands.push(product.marka)
+        }
+        setMarkes([...brands])
+    })
+    }, [products])
+
     return (
         <div className='markes-filter' style={!isActive ? {transform: 'translateX(100%)'} : {}}>
             <h3 className='text-white m-3'>Μάρκες</h3>
             <div className='markes-wrapper'> 
-                <div className="inputGroup">
-                    <input id="option1" name="option1" type="checkbox" value='Flatazor Pro-Nutrition' onChange={filterFood} />
-                    <label htmlFor="option1">Flatazor Pro-Nutrition</label>
-                </div> 
-                <div className='inputGroup'>
-                    <input id="option2" name="option1" type="checkbox" value='ROYAL CANIN' onChange={filterFood} />
-                    <label htmlFor="option2">ROYAL CANIN</label>
-                </div>  
+                {markes !== undefined ? markes.map((marka, i) =>  
+                    <div className="inputGroupDesk" key={i}>
+                        <input id={`lel${i}`} name={`lel${i}`} type="checkbox" value={marka} onChange={filterFood} />
+                        <label htmlFor={`lel${i}`}>{marka}</label>
+                    </div>
+                ) : <></>}
             </div>
             <Button variant='danger' onClick={() => setMarkesComp(false)}>Επιβεβαίωση</Button>
         </div>

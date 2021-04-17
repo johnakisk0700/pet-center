@@ -49,7 +49,7 @@ input {
 }
 
 .content-container {
-  padding-bottom: 28rem;
+  padding-bottom: 40rem;
   padding-top: 3.5rem;
 }
 
@@ -66,6 +66,7 @@ input {
   display: grid;
   grid-template-columns: 49% 2% 49%;
   background-color: $black;
+  box-shadow: 0 2px 6px #2f2f2f;
   color: white;
   border-radius: 12px 12px 0 0;
   position: absolute;
@@ -74,6 +75,8 @@ input {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  padding: 2rem;
+  word-break: break-word;
 }
 
 .erwthsh-text {
@@ -248,6 +251,7 @@ input {
   margin: 0.7rem;
 }
 .product-expanded {
+  min-height: 70vh;
   border: solid 1px #f9f9f9;
   box-shadow: 0 0 4px #efefef;
   background-color: white;
@@ -279,8 +283,10 @@ input {
 }
 .pagination {
   display: flex;
+  justify-content: center;
   grid-column: 2;
   justify-self: center;
+  margin-bottom: 2rem;
   div{
     padding: 0.5rem 0.8rem;
     margin: 0 0.2rem;
@@ -313,34 +319,52 @@ input {
 
 
 
-
 .image-gallery {
-  margin-top: 2rem;
-}
-.image-gallery-slide {
   height: 18rem;
+  width: auto;
+  margin-bottom: 6rem;
+}
+
+.image-gallery-slide img {
+  height: 18rem;
+  width: auto;
   object-fit: cover;
-  img{
-    max-height: 18rem!important;
+}
+
+.fullscreen .image-gallery-slide img {
+  max-height: 100vh;
+  object-position: center center;
+}
+@media all and (display-mode: fullscreen) {
+  .image-gallery {
+    height: 100vh;
+    width: auto;
   }
+  .image-gallery-slide img {
+    height: 94vh;
+    width: auto;
+    object-fit: contain;
+  }
+
+}
+
+
+
+.image-gallery-index{
+  border-radius: $br;
 }
 .image-gallery-thumbnail-image {
   height: 4rem;
   object-fit: cover;
 }
 .image-gallery-svg {
-  height: 4rem!important;
-  width: 2rem!important;
+  height: 3.5rem!important;
+  width: 1.75rem!important;
 }
 .image-gallery-fullscreen-button {
   padding: 1rem;
 }
-.fullscreen .image-gallery-slide {
-  height: calc(100vh - 6rem)!important;
-  img{
-    max-height: calc(100vh - 6rem)!important;
-  }
-}
+
 .image-gallery-thumbnail, .image-gallery-thumbnail, .image-gallery-thumbnail{
   overflow: hidden;
   border-radius: $br;
