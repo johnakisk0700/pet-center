@@ -19,7 +19,7 @@ const ProductScreen = ({match}) => {
     const [ markesComp, setMarkesComp ] = useState(false)
     const [ colorFilterComp, setColorFilterComp ] = useState(false)
     const [ currentPage, setCurrentPage ] = useState(1)
-    const [ productsPerPage ] = useState(12)
+    const [ productsPerPage ] = useState(15)
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1199px)' })
     const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1200px)'})
     const params = match.params
@@ -129,7 +129,7 @@ const ProductScreen = ({match}) => {
                 </Row>
                 
                 
-                {filteredProducts.length > 12 && <Pagination filteredProducts={filteredProducts} productsPerPage={productsPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
+                {filteredProducts.length > 15 && <Pagination filteredProducts={filteredProducts} productsPerPage={productsPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
             
             
             </Container>
