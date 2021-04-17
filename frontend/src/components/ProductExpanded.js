@@ -9,7 +9,7 @@ const ProductExpanded = ({product}) => {
     const sizes = product.size[0].split(';')
     return (
         <Row xs={1} sm={1} md={2} className='product-expanded'>
-            <Col className='align-self-center mb-5' onMouseOver={()=>setShowNav(true)} onMouseLeave={() => setShowNav(false)}>
+            <Col className='mt-5 mb-5' onMouseOver={()=>setShowNav(true)} onMouseLeave={() => setShowNav(false)}>
                 <ImageGallery items={myImages} showPlayButton={false} showNav={showNav} showIndex={showNav} showFullscreenButton={showNav} slideDuration={250}/>
             </Col>
             <Col className='text-center mt-5'>
