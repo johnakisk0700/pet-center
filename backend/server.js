@@ -8,7 +8,7 @@ import {getProductsByCategory, getProductById, addProduct, updProduct} from './c
 import {authAdmin} from './controllers/adminController.js'
 import { protect } from './middleware/authMiddleware.js'
 import connectDB from './config/db.js'
-
+import cors from 'cors'
 import multer from 'multer'
 import fs from 'fs'
 dotenv.config()
@@ -16,7 +16,7 @@ connectDB()
 const app = express()
 app.use(express.json())
 app.use('/images', express.static('images'))
-
+app.use(cors())
 // EXPRESS
 
 var storage = multer.diskStorage({

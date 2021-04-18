@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
-const MarkesFilter = ({filterFood, setMarkesComp, isActive, products}) => {
+const MarkesFilter = ({filterFood, setMarkesComp, isActive, products, markesFiltra}) => {
     const [ markes, setMarkes ] = useState([])
     useEffect(() => {
         let brands = []
@@ -17,8 +17,8 @@ const MarkesFilter = ({filterFood, setMarkesComp, isActive, products}) => {
             <h3 className='text-white m-3'>Μάρκες</h3>
             <div className='markes-wrapper'> 
                 {markes !== undefined ? markes.map((marka, i) =>  
-                    <div className="inputGroupDesk" key={i}>
-                        <input id={`lel${i}`} name={`lel${i}`} type="checkbox" value={marka} onChange={filterFood} />
+                    <div className="inputGroupDesk" key={i} >
+                        <input id={`lel${i}`} name={`lel${i}`} type="checkbox" value={marka} onChange={filterFood} checked={markesFiltra.includes(marka)}/>
                         <label htmlFor={`lel${i}`}>{marka}</label>
                     </div>
                 ) : <></>}

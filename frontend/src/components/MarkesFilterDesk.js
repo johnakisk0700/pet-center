@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-const MarkesFilterDesk = ({filterFood, products}) => {
+const MarkesFilterDesk = ({filterFood, products, markesFiltra}) => {
     const [ markes, setMarkes ] = useState([])
     useEffect(() => {
         let brands = []
@@ -17,7 +17,7 @@ const MarkesFilterDesk = ({filterFood, products}) => {
         <div className='markes-wrapper-desk'> 
             {markes !== undefined ? markes.map((marka, i) =>  
                 <div className="inputGroupDesk" key={i}>
-                    <input id={`lel${i}`} name={`lel${i}`} type="checkbox" value={marka} onChange={filterFood} />
+                    <input id={`lel${i}`} name={`lel${i}`} type="checkbox" value={marka} onChange={filterFood} checked={markesFiltra.includes(marka)}/>
                     <label htmlFor={`lel${i}`}>{marka}</label>
                 </div>
             ) : <></>}

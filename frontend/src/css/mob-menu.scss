@@ -114,6 +114,9 @@
   height: calc(100% - 7.5rem);
   overflow: scroll;
 }
+.active-filter{
+  background-color: $red!important;
+}
 .markes-button {
   transition: all 0.3s ease;
   font-size: 1.2rem;
@@ -127,6 +130,16 @@
   background-color: $black;
   color: white;
   border-radius: $br 0 0 $br;
+  border-top: 2px solid $black;
+  border-left: 3px solid $black;
+  border-bottom: 2px solid $black;
+  box-shadow: 0 0px 4px $hShadow;
+    img{
+      height: 1.2rem;
+      margin: 0.2rem;
+      transform: translateY(-1px)
+    }
 }
+
 
 /*Εδώ για το mobile menu*/
