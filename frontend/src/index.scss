@@ -421,7 +421,7 @@ input {
     cursor: pointer;
     position: relative;
     z-index: 2;
-    transition: color 120ms cubic-bezier(0.5, 0.0, 0.2, -1);
+    transition: color 100ms cubic-bezier(-0.4, 0.1, 0.0, -1);
     overflow: hidden;
 }
 .dokimastiko-before {
@@ -434,7 +434,7 @@ input {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%) scale3d(1, 1, 1);
-      transition: background-color 50ms, all 120ms cubic-bezier(0.5, 0.0, 0.2, -1);
+      transition: background-color 40ms, all 100ms cubic-bezier(0.0, 0.2, 0.1, -1);
       opacity: 0;
       z-index: 1;
 }
