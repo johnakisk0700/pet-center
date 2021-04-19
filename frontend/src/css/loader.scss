@@ -19,7 +19,7 @@
   .lds-hourglass-big {
     display: flex;
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 4rem;
     position: relative;
     width: 3rem;
     height: 3rem;
@@ -33,6 +33,26 @@
     box-sizing: border-box;
     border: 1.5rem solid $black;
     border-color: $black transparent $black transparent;
+    animation: lds-hourglass 1.2s infinite;
+  }
+  .lds-hourglass-big-white {
+    display: flex;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+  }
+  .lds-hourglass-big-white:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    border: 1rem solid white;
+    border-color: white transparent white transparent;
     animation: lds-hourglass 1.2s infinite;
   }
   @keyframes lds-hourglass {

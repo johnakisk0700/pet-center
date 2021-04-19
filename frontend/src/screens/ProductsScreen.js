@@ -1,17 +1,17 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import { useMediaQuery } from 'react-responsive'
 import Product from '../components/Product'
 import Xarths from '../components/Xarths'
 import axios from 'axios'
 import BigLoader from '../components/BigLoader'
-import MarkesFilter from '../components/MarkesFilter'
-import MarkesFilterDesk from '../components/MarkesFilterDesk'
-import ColorFilter from '../components/ColorFilter'
-import ColorFilterDesk from '../components/ColorFilterDesk'
 import Pagination from '../components/Pagination'
 import {zwa, kathgories, ypokathgories} from '../components/layout/translate'
-import { set } from 'mongoose'
+const MarkesFilter = lazy(()=>import('../components/MarkesFilter.js'))
+const MarkesFilterDesk = lazy(()=>import('../components/MarkesFilterDesk.js'))
+const ColorFilter = lazy(()=>import('../components/ColorFilter.js'))
+const ColorFilterDesk = lazy(()=>import('../components/ColorFilterDesk.js'))
+const ClosingHandler = lazy(() => import('../components/ClosingHandler.js'))
 const ProductScreen = ({match}) => {
     const [ products, setProducts ] = useState([])
     const [ filteredProducts, setFilteredProducts ] = useState([])
@@ -142,7 +142,11 @@ const ProductScreen = ({match}) => {
                         <div className={brandFilters.length > 0 ? 'markes-button active-filter' : 'markes-button'} onClick={() => setMarkesComp(true)} style={markesComp ? {transform: 'translateX(100%)'} : {}}>
                             Μάρκες {brandFilters.length > 0 ? <img src='/tick.svg'></img> : ''}
                         </div>
-                        <MarkesFilter filterFood={filterFood} products={products} isActive={markesComp} setMarkesComp={setMarkesComp} markesFiltra={brandFilters}/>
+                        <Suspense fallback={<></>}>
+                            <ClosingHandler setMarkesComp={setMarkesComp}>
+                                <MarkesFilter filterFood={filterFood} products={products} isActive={markesComp} setMarkesComp={setMarkesComp} markesFiltra={brandFilters}/>
+                            </ClosingHandler>
+                        </Suspense>
                     </>}
             </>}
             
@@ -150,8 +154,10 @@ const ProductScreen = ({match}) => {
                     {isTabletOrMobile && <>
                         <div className={colorFilters.length > 0 ? 'markes-button active-filter' : 'markes-button'}  onClick={() => setColorFilterComp(true)} style={colorFilterComp ? {transform: 'translateX(100%)'} : {}}>
                             Χρώματα {colorFilters.length > 0 ? <img src='/tick.svg'></img> : ''}
-                            </div>
-                        <ColorFilter filterByColor={filterByColor} setColorFilterComp={setColorFilterComp} isActive={colorFilterComp} xrwmataFiltra={colorFilters}/>
+                        </div>
+                        <Suspense fallback={<></>}>    
+                            <ColorFilter filterByColor={filterByColor} setColorFilterComp={setColorFilterComp} isActive={colorFilterComp} xrwmataFiltra={colorFilters}/>
+                        </Suspense>
                     </>}
             </>}
             
@@ -163,14 +169,18 @@ const ProductScreen = ({match}) => {
             <Container className={isDesktopOrLaptop & params.category === 'trofes' || isDesktopOrLaptop & params.category === 'louria'? 'products-container' : ''} style={{minHeight: '65vh'}} >
                 
                 {params.category === 'trofes' & isDesktopOrLaptop ? 
-                <>
-                    <MarkesFilterDesk filterFood={filterFood} products={products} markesFiltra={brandFilters}/>
+                <>  
+                    <Suspense fallback={<></>}>
+                        <MarkesFilterDesk filterFood={filterFood} products={products} markesFiltra={brandFilters}/>
+                    </Suspense>
                 </> : <></>}
                 
                 
                 {params.category === 'louria' & isDesktopOrLaptop ? 
                 <>
-                    <ColorFilterDesk filterByColor={filterByColor} setColorFilterComp={setColorFilterComp} xrwmataFiltra={colorFilters}/>
+                    <Suspense fallback={<></>}> 
+                        <ColorFilterDesk filterByColor={filterByColor} setColorFilterComp={setColorFilterComp} xrwmataFiltra={colorFilters}/>
+                    </Suspense>
                 </> : <></>}
                 
                 
