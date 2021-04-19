@@ -399,7 +399,6 @@ input {
   max-width: 92%;
   border-radius: $br;
   overflow: hidden;
-  transition-delay: 0.06s
 }
 .dokimastikoGroup-selected {
   background-color: #fff;
@@ -408,7 +407,7 @@ input {
   max-width: 92%;
   border-radius: $br;
   overflow: hidden;
-  transition-delay: 0.1s;
+  transition-delay: 0.02s;
 }
 .dokimastiko-label{
   border-radius: $br;
@@ -421,7 +420,7 @@ input {
     cursor: pointer;
     position: relative;
     z-index: 2;
-    transition: color 100ms cubic-bezier(-0.4, 0.1, 0.0, -1);
+    transition: color 40ms ;
     overflow: hidden;
 }
 .dokimastiko-before {
@@ -434,7 +433,7 @@ input {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%) scale3d(1, 1, 1);
-      transition: background-color 40ms, all 100ms cubic-bezier(0.0, 0.2, 0.1, -1);
+      transition: background-color 20ms, all 40ms;
       opacity: 0;
       z-index: 1;
 }
@@ -454,7 +453,7 @@ input {
       top: 50%;
       transform: translateY(-50%);
       cursor: pointer;
-      transition: all 120ms ease-in-out;
+      transition: all 40ms ease-in-out;
 }
 .dokimastiko-input{
     width: 2rem;
