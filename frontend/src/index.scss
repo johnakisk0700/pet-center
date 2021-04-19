@@ -262,8 +262,10 @@ input {
   text-decoration: none;
   margin: 0.7rem;
 }
+.product-expanded-wrapper {
+  min-height: 75vh;
+}
 .product-expanded {
-  min-height: 70vh;
   border: solid 1px #f9f9f9;
   box-shadow: 0 0 4px #efefef;
   background-color: white;
