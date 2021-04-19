@@ -10,9 +10,28 @@ import { protect } from './middleware/authMiddleware.js'
 import connectDB from './config/db.js'
 import multer from 'multer'
 import fs from 'fs'
+
+
+
+
+import cors from 'cors'
+
+
+
+
+
 dotenv.config()
 connectDB()
 const app = express()
+
+
+
+
+
+app.use(cors())
+
+
+
 app.use(express.json())
 app.use('/images', express.static('images'))
 // EXPRESS

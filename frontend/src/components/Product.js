@@ -2,6 +2,11 @@ import { Col, Card } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 const Product = ({product, match}) => {
     const img = product.images[0]
+    /* auto edw einai gia na deixnei ta sizes --> 
+        {product.category === 'trofes' ? <>
+        {product.size[0].replace(/;/g, ', ')}
+        </> : <></>} 
+    */
     return (
     
         <Col>
@@ -11,9 +16,6 @@ const Product = ({product, match}) => {
                 <Card.Body>
                 <Card.Title className='h6'>{product.name}</Card.Title>
                 <Card.Subtitle className='mb-1'>
-                    {product.category === 'trofes' ? <>
-                        {product.size[0].replace(/;/g, ', ')}
-                    </> : <></>}
                 </Card.Subtitle>
                 <Card.Subtitle>
                     <i>Κωδ.:</i> #{product.pid}

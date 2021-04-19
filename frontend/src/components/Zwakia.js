@@ -16,7 +16,7 @@ const Zwakia = () => {
                     <img  src={Decor} style={{transform: "scaleX(-1)"}} alt='' />
                 </Col>  
             </Row>
-            <Row className='justify-content-center'>  
+            <Row className='justify-content-center' md={4} lg={4} xl={5} sm={3} xs={1}>  
                 <Zwaki title='Γάτα' img='/photos-cropped/gatos.png' url='/gata'/>
                 <Zwaki title='Σκύλος' img='/photos-cropped/skylos.png' url='/skylos'/>
                 <Zwaki title='Πτηνό' img='/photos-cropped/birb.png' url='/pthno'/>

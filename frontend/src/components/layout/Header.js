@@ -19,8 +19,8 @@ import Rabbit from './menu/svg-icons/rabbit.svg';
 import Turtle from './menu/svg-icons/turtle.svg';
 
 const Header = () => {
-    const isDesktop = useMediaQuery({ query: '(min-width: 1200px)' });
-    const isTablet = useMediaQuery({ query: '(max-width: 1199px)' });
+    const isDesktop = useMediaQuery({ query: '(min-width: 1279px)' });
+    const isTablet = useMediaQuery({ query: '(max-width: 1280px)' });
     const [isDrop, setIsDrop] = useState(false);
     const nodeRef = useRef(null);
     const nodeRef2 = useRef(null);

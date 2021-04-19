@@ -15,47 +15,63 @@ import { set } from 'mongoose'
 const ProductScreen = ({match}) => {
     const [ products, setProducts ] = useState([])
     const [ filteredProducts, setFilteredProducts ] = useState([])
+    
     const [ brandFilters, setBrandFilters ] = useState([])
     const [ colorFilters, setColorFilters ] = useState([])
-    const [ loading, setLoading ] = useState(false)
     const [ markesComp, setMarkesComp ] = useState(false)
     const [ colorFilterComp, setColorFilterComp ] = useState(false)
+    
+    const [ loading, setLoading ] = useState(false)
+    
+    
+    
     const [ currentPage, setCurrentPage ] = useState(1)
     const [ productsPerPage ] = useState(15)
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1199px)' })
-    const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1200px)'})
+    
+    
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1279px)' })
+    const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1280px)'})
+    
     const params = match.params
+    
+    const scrollTop = () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    
     //Pagination stuff
     const indexOfLastProduct = currentPage * productsPerPage
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage
     const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
     //Pagination
+    const getFiltraName = () => {
+        return(params.subcategory === undefined ? `markes${params.animal}` : `markes${params.animal}${params.subcategory}`)
+    }
+    
     const filterFood = (e) => {
         const currentIndex = brandFilters.indexOf(e.target.value)
         const newChecked = [...brandFilters]
         if(currentIndex === -1){
             newChecked.push(e.target.value)
-            localStorage.setItem('markes', JSON.stringify(newChecked))
+            localStorage.setItem(getFiltraName(), JSON.stringify(newChecked))
         }
         else{
             newChecked.splice(currentIndex, 1)
-            localStorage.setItem('markes', JSON.stringify(newChecked))
+            localStorage.setItem(getFiltraName(), JSON.stringify(newChecked))
         }
         setBrandFilters(newChecked)
         if(newChecked.length === 0){
             setCurrentPage(1)
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            scrollTop()
             setFilteredProducts(products)
         }else{
             setCurrentPage(1)
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            scrollTop()
             setFilteredProducts(products.filter(product => newChecked.includes(product.marka)))
         }
                
     }
-    //gia thn wra to brandFilters kanei kai gia ta 2, an xreiastoun parapanw apo 1 filtra prepei na grapsw ki allo!!!
+
     const filterByColor = (e) => {
         const currentIndex = colorFilters.indexOf(e.target.value)
         const newChecked = [...colorFilters]
@@ -70,13 +86,11 @@ const ProductScreen = ({match}) => {
         setColorFilters(newChecked)
         if(newChecked.length === 0){
             setCurrentPage(1)
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            scrollTop()
             setFilteredProducts(products)
         }else{
             setCurrentPage(1)
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            scrollTop()
             setFilteredProducts(products.filter(product => newChecked.some((r)=>product.colors.includes(r))))
         }
                
@@ -90,12 +104,12 @@ const ProductScreen = ({match}) => {
                 setProducts([...producterinos])
                 //psakse sto local storage gia ta filtra kai settare ta
                 if(params.category === 'trofes'){    
-                    const markesFiltra = localStorage.getItem('markes')
-                    if(markesFiltra){
-                        let parsed = JSON.parse(markesFiltra)
+                    const markesFiltraLocalStorage = localStorage.getItem(getFiltraName())
+                    if(markesFiltraLocalStorage){
+                        let parsed = JSON.parse(markesFiltraLocalStorage)
                         if(parsed.length > 0){
-                            setBrandFilters([...JSON.parse(markesFiltra)])
-                            producterinos = producterinos.filter(product => markesFiltra.includes(product.marka))
+                            setBrandFilters([...JSON.parse(markesFiltraLocalStorage)])
+                            producterinos = producterinos.filter(product => markesFiltraLocalStorage.includes(product.marka))
                         }
                     }
                 }
@@ -146,7 +160,7 @@ const ProductScreen = ({match}) => {
             </Row>
             
             
-            <Container className={isDesktopOrLaptop & params.category === 'trofes' || isDesktopOrLaptop & params.category === 'louria'? 'products-container' : ''}>
+            <Container className={isDesktopOrLaptop & params.category === 'trofes' || isDesktopOrLaptop & params.category === 'louria'? 'products-container' : ''} style={{minHeight: '65vh'}} >
                 
                 {params.category === 'trofes' & isDesktopOrLaptop ? 
                 <>
@@ -160,7 +174,7 @@ const ProductScreen = ({match}) => {
                 </> : <></>}
                 
                 
-                <Row xs={1} sm={2} md={3} lg={4} xl={params.category === 'trofes' || params.category === 'louria' ? 5 : 6} style={{minHeight: '65vh'}} >
+                <Row xs={1} sm={2} md={3} lg={4} xl={params.category === 'trofes' || params.category === 'louria' ? 5 : 6} className='products-wrapper'>
                     {currentProducts.map((product)=>{
                         return(
                             <Product match={match} product={product} key={product.pid}/>
