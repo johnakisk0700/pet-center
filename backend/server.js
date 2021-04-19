@@ -10,7 +10,7 @@ import { protect } from './middleware/authMiddleware.js'
 import connectDB from './config/db.js'
 import multer from 'multer'
 import fs from 'fs'
-
+import expressStaticGzip from 'express-static-gzip'
 
 
 
@@ -78,7 +78,14 @@ app.post('/api/admin/delprev', protect, asyncHandler( async(req, res) => {
 
 // AYTA EINAI NA TA VALW STO TELOS STO PRODUCTION GIA NA DEIXNEI TO PAYGE
 const __dirname = path.resolve()
-app.use(express.static(path.join(__dirname, 'frontend' , 'build')))
+app.use(expressStaticGzip(path.join(__dirname, 'frontend' , 'build'), {
+    enableBrotli: true,
+    customCompressions: [{
+        encodingName: 'deflate',
+        fileExtension: 'zz'
+    }],
+    orderPreference: ['br']
+}))
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
 })
