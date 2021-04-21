@@ -13,15 +13,14 @@ import Dog from './menu/svg-icons/dog.svg';
 import Fish from './menu/svg-icons/fish.svg';
 import Rabbit from './menu/svg-icons/rabbit.svg';
 import Turtle from './menu/svg-icons/turtle.svg';
-import BigLoader from '../BigLoader'
 import BigLoaderWhite from '../BigLoaderWhite'
 const Menu = lazy(()=>import('./menu/desktop-menu/Menu.js'))
 const MobMenu = lazy(()=>import('./menu/mobile-menu/MobMenu.js'))
 const MobMenuItem = lazy(()=>import('./menu/mobile-menu/MobMenuItem.js'))
 const Burger = lazy(()=>import('./menu/mobile-menu/Burger.js'))
 const Header = () => {
-    const isDesktop = useMediaQuery({ query: '(min-width: 1279px)' });
-    const isTablet = useMediaQuery({ query: '(max-width: 1280px)' });
+    const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+    const isTablet = useMediaQuery({ query: '(max-width: 1279px)' });
     const [isDrop, setIsDrop] = useState(false);
     const nodeRef = useRef(null);
     const nodeRef2 = useRef(null);
@@ -41,11 +40,11 @@ const Header = () => {
                                 <Col xs={2}>
                                 </Col>
                                 
-                                <LinkContainer to='/'><Col className='d-flex justify-content-center'>
-                                        
+                                <LinkContainer to='/'>
+                                    <Col className='d-flex justify-content-center'>  
                                         <img className='mob-logo' src={PetLogo} alt='logo' />
-                                        
-                                </Col></LinkContainer>
+                                    </Col>
+                                </LinkContainer>
                                 
                                 <Col xs={2} className='d-flex justify-content-center' onClick={() => setIsDrop(!isDrop)}>
                                     <Suspense fallback={<></>}><Burger /></Suspense>

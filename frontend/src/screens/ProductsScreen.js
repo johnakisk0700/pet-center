@@ -6,19 +6,24 @@ import Xarths from '../components/Xarths'
 import axios from 'axios'
 import BigLoader from '../components/BigLoader'
 import Pagination from '../components/Pagination'
+import MarkesFilter from '../components/MarkesFilter'
 import {zwa, kathgories, ypokathgories} from '../components/layout/translate'
-const MarkesFilter = lazy(()=>import('../components/MarkesFilter.js'))
+
+
 const MarkesFilterDesk = lazy(()=>import('../components/MarkesFilterDesk.js'))
 const ColorFilter = lazy(()=>import('../components/ColorFilter.js'))
 const ColorFilterDesk = lazy(()=>import('../components/ColorFilterDesk.js'))
-const ClosingHandler = lazy(() => import('../components/ClosingHandler.js'))
+
+
+
+
 const ProductScreen = ({match}) => {
     const [ products, setProducts ] = useState([])
     const [ filteredProducts, setFilteredProducts ] = useState([])
     
     const [ brandFilters, setBrandFilters ] = useState([])
     const [ colorFilters, setColorFilters ] = useState([])
-    const [ markesComp, setMarkesComp ] = useState(false)
+    
     const [ colorFilterComp, setColorFilterComp ] = useState(false)
     
     const [ loading, setLoading ] = useState(false)
@@ -34,9 +39,10 @@ const ProductScreen = ({match}) => {
     
     const params = match.params
     
-    const scrollTop = () => {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    const scrollTop = () => {      
+        document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0 // For Safari
+        window.scrollTo(0, 0)
     }
     
     //Pagination stuff
@@ -62,12 +68,12 @@ const ProductScreen = ({match}) => {
         setBrandFilters(newChecked)
         if(newChecked.length === 0){
             setCurrentPage(1)
-            scrollTop()
             setFilteredProducts(products)
-        }else{
-            setCurrentPage(1)
             scrollTop()
+        }else{         
+            setCurrentPage(1)
             setFilteredProducts(products.filter(product => newChecked.includes(product.marka)))
+            scrollTop()
         }
                
     }
@@ -86,12 +92,12 @@ const ProductScreen = ({match}) => {
         setColorFilters(newChecked)
         if(newChecked.length === 0){
             setCurrentPage(1)
-            scrollTop()
             setFilteredProducts(products)
+            scrollTop()
         }else{
             setCurrentPage(1)
-            scrollTop()
             setFilteredProducts(products.filter(product => newChecked.some((r)=>product.colors.includes(r))))
+            scrollTop()
         }
                
     }
@@ -138,26 +144,14 @@ const ProductScreen = ({match}) => {
         <>
             <Xarths match={match} />
             {params.category === 'trofes' && <>
-                    {isTabletOrMobile && <>
-                        <div className={brandFilters.length > 0 ? 'markes-button active-filter' : 'markes-button'} onClick={() => setMarkesComp(true)} style={markesComp ? {transform: 'translateX(100%)'} : {}}>
-                            Μάρκες {brandFilters.length > 0 ? <img src='/tick.svg'></img> : ''}
-                        </div>
-                        <Suspense fallback={<></>}>
-                            <ClosingHandler setMarkesComp={setMarkesComp}>
-                                <MarkesFilter filterFood={filterFood} products={products} isActive={markesComp} setMarkesComp={setMarkesComp} markesFiltra={brandFilters}/>
-                            </ClosingHandler>
-                        </Suspense>
+                    {isTabletOrMobile && <>          
+                        <MarkesFilter filterFood={filterFood} products={products} markesFiltra={brandFilters}  />
                     </>}
             </>}
             
             {params.category === 'louria' && <>
-                    {isTabletOrMobile && <>
-                        <div className={colorFilters.length > 0 ? 'markes-button active-filter' : 'markes-button'}  onClick={() => setColorFilterComp(true)} style={colorFilterComp ? {transform: 'translateX(100%)'} : {}}>
-                            Χρώματα {colorFilters.length > 0 ? <img src='/tick.svg'></img> : ''}
-                        </div>
-                        <Suspense fallback={<></>}>    
-                            <ColorFilter filterByColor={filterByColor} setColorFilterComp={setColorFilterComp} isActive={colorFilterComp} xrwmataFiltra={colorFilters}/>
-                        </Suspense>
+                    {isTabletOrMobile && <>  
+                        <ColorFilter filterByColor={filterByColor} setColorFilterComp={setColorFilterComp} isActive={colorFilterComp} xrwmataFiltra={colorFilters}/>
                     </>}
             </>}
             

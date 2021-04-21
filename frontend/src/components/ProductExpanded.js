@@ -1,17 +1,28 @@
 import { Row, Col } from 'react-bootstrap'
 import ImageGallery from 'react-image-gallery'
 import {xrwmata} from './layout/translate'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 const ProductExpanded = ({product}) => {
-    const [ showNav, setShowNav ] = useState(false)    
-    const myImages = [] 
+    const [ showNav, setShowNav ] = useState(false)
+    const [ isFullScreen, setIsFullScreen ] = useState(false) 
+    const myImages = []
+    const galleryRef = useRef(null)
+    const _onImageClick = (e) => {
+        if(isFullScreen){
+            e.current.fullScreen()
+            setIsFullScreen(() => setIsFullScreen(!isFullScreen))
+        }else{
+            e.current.exitFullScreen()
+            setIsFullScreen(() => setIsFullScreen(!isFullScreen))
+        }
+    }
     product.images.forEach((image) => myImages.push({original: `${process.env.REACT_APP_API_URL}${image}`, thumbnail: `${process.env.REACT_APP_API_URL}${image}`}))
     const sizes = product.size[0].split(';')
     return (
         <div className='product-expanded-wrapper'>
             <Row xs={1} sm={1} md={2} className='product-expanded'>
                 <Col className='mt-5 mb-5' onMouseOver={()=>setShowNav(true)} onMouseLeave={() => setShowNav(false)}>
-                    <ImageGallery items={myImages} showPlayButton={false} showNav={showNav} showIndex={showNav} showFullscreenButton={showNav} slideDuration={250}/>
+                    <ImageGallery items={myImages} showPlayButton={false} showNav={showNav} showIndex={showNav} showFullscreenButton={showNav} slideDuration={250} onClick={() => _onImageClick(galleryRef)} ref={galleryRef}/>
                 </Col>
                 <Col className='text-center mt-5'>
                     <h3>{product.name}</h3>

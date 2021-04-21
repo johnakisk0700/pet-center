@@ -18,9 +18,8 @@ const MarkesFilterDesk = ({filterFood, products, markesFiltra}) => {
             {markes !== undefined ? markes.map((marka, i) =>  
                 <div className={markesFiltra.includes(marka) ? 'dokimastikoGroup-selected' : 'dokimastikoGroup'} key={i} style={markesFiltra.includes(marka) ? {backgroundColor: '#011627'} : {}} >  
                     <input id={`lel${i}`} name={`lel${i}`} type="checkbox" value={marka} onChange={filterFood} checked={markesFiltra.includes(marka)} className='dokimastiko-input'/>
-                    <div className='dokimastiko-before' style={markesFiltra.includes(marka) ? {backgroundColor: '#011627', transform: 'translate(-50%, -50%) scale3d(11, 11, 1)', opacity: '1'} : {}} />
                     <label htmlFor={`lel${i}`} className='dokimastiko-label' style={markesFiltra.includes(marka) ? {color: 'white'} : {}}>{marka}</label>
-                    <div className='dokimastiko-after' style={markesFiltra.includes(marka) ? {backgroundColor: '#BE1E2D', borderColor: '#011627'} : {}} />
+                    <div className='dokimastiko-after' style={markesFiltra.includes(marka) ? {backgroundColor: '#BE1E2D', borderColor: '#BE1E2D'} : {}} />
                 </div>
             ) : <></>}
         </div>

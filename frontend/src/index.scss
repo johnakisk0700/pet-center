@@ -26,10 +26,11 @@ $grey: #747474;
 }
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background-color: $bg;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -407,7 +408,7 @@ input {
   max-width: 92%;
   border-radius: $br;
   overflow: hidden;
-  transition-delay: 0.02s;
+  transition: all 50ms ease-in-out;
 }
 .dokimastiko-label{
   border-radius: $br;
@@ -420,22 +421,8 @@ input {
     cursor: pointer;
     position: relative;
     z-index: 2;
-    transition: color 40ms ;
+    transition: color 50ms ease-in-out;
     overflow: hidden;
-}
-.dokimastiko-before {
-      width: 10vw;
-      height: 10vw;
-      border-radius: 50%;
-      content: '';
-      background-color: white;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%) scale3d(1, 1, 1);
-      transition: background-color 20ms, all 40ms;
-      opacity: 0;
-      z-index: 1;
 }
 .dokimastiko-after {
       width: 1.5rem;
@@ -443,9 +430,9 @@ input {
       content: '';
       border: 2px solid #D1D7DC;
       background-color: #fff;
-      background-image: url("data:image/svg+xml,%3Csvg width='1.5rem' height='1.5rem' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='1.5rem' height='1.5rem' viewBox='0 0 1rem 1rem' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
-      background-position: 0.05rem 0.15rem;
+      background-position: -0.15rem -0.05rem;
       border-radius: 50%;
       z-index: 2;
       position: absolute;
@@ -453,7 +440,7 @@ input {
       top: 50%;
       transform: translateY(-50%);
       cursor: pointer;
-      transition: all 40ms ease-in-out;
+      transition: all 50ms ease-in-out;
 }
 .dokimastiko-input{
     width: 2rem;
