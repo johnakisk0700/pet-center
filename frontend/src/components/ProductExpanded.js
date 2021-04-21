@@ -12,6 +12,7 @@ const ProductExpanded = ({product}) => {
         if(isFullScreen){
             e.current.fullScreen()
             setIsFullScreen(() => setIsFullScreen(!isFullScreen))
+            setShowNav(() => setShowNav(true))
         }else{
             e.current.exitFullScreen()
             setIsFullScreen(() => setIsFullScreen(!isFullScreen))
