@@ -8,6 +8,7 @@ const ProductExpanded = ({product}) => {
     const myImages = []
     const galleryRef = useRef(null)
     const _onImageClick = (e) => {
+        setShowNav(() => setShowNav(!showNav))
         if(isFullScreen){
             e.current.fullScreen()
             setIsFullScreen(() => setIsFullScreen(!isFullScreen))
