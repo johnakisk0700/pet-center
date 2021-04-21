@@ -349,20 +349,16 @@ input {
 }
 
 .fullscreen .image-gallery-slide img {
-  max-height: 100vh;
+  height: 94vh;
+  max-width: 100vw;
+  object-fit: contain;
   object-position: center center;
 }
-@media all and (display-mode: fullscreen) {
-  .image-gallery {
+.fullscreen{
+  .image-gallery-content {
     height: 100vh;
     width: auto;
   }
-  .image-gallery-slide img {
-    height: 94vh;
-    width: auto;
-    object-fit: contain;
-  }
-
 }
 
 
