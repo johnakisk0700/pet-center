@@ -4,10 +4,12 @@ import asyncHandler from 'express-async-handler'
 const getProductsByCategory = asyncHandler(async (req, res) => {
     if(req.params.subcategory !== undefined){
         const products = await Product.find({animal: req.params.animal, category: req.params.category, subcategory: req.params.subcategory}).lean()
+        res.json(products)
     }else{
         const products = await Product.find({animal: req.params.animal, category: req.params.category}).lean()
+        res.json(products)
     }
-    res.json(products)  
+      
 })
 
 const getProductById = asyncHandler(async (req, res) => {
