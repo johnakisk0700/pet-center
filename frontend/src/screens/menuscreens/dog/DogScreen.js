@@ -17,6 +17,8 @@ const DogScreen = () => {
                 <MenuRect title='Cage Μεταφοράς' img='/menu-photos/cat/travelcage.jpg' url={`${url}/travelcage/proionta`} />
                 <MenuRect title='Κρεβάτια' img='/menu-photos/dog/krevati.jpg' url={`${url}/krevatia/proionta`} />
                 <MenuRect title='Χτένες - Σαμπουάν' img='/menu-photos/cat/xtenesampouan.jpg' url={`${url}/xtenesampouan/proionta`} />
+                <MenuRect title='Συμπληρώματα Διατροφής' img='/menu-photos/cat/symplhrwmata.jpg' url={`${url}/symplhrwmata/proionta`} />
+                <MenuRect title='Είδη Υγιεινής' img='/menu-photos/cat/ygeia.jpg' url={`${url}/ygeia/proionta`} />
             </Row>
             
         </div>

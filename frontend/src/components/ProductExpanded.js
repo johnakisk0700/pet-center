@@ -29,7 +29,7 @@ const ProductExpanded = ({product}) => {
                 <Col className='text-center mt-5'>
                     <h3>{product.name}</h3>
                     <i>Κωδικός:</i> <p>#{product.pid}</p>
-                    <i>Περιγραφή:</i> <p>{product.description}</p>
+                    <i>Περιγραφή:</i> <p style={{whiteSpace: 'pre-line'}}>{product.description}</p>
                     <i>Μεγέθη:</i>
                         <ul className='product-sizes mb-3'>
                             {sizes.map((size, i)=> <li key={size + i}>{size}</li>)}

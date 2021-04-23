@@ -14,7 +14,6 @@ import expressStaticGzip from 'express-static-gzip'
 
 
 
-import cors from 'cors'
 
 
 
@@ -28,7 +27,6 @@ const app = express()
 
 
 
-app.use(cors())
 
 
 

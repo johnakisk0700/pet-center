@@ -3,7 +3,8 @@ $black: #011627;
 $lightB: #01162733;
 $bg: #FAFFF8;
 $hShadow: #2F2F2F;
-$sShadow: #cccbcb;
+$sShadow: rgba(0, 0, 0, 0.125);
+$hGrey: #2f2f2f;
 $br: 13px;
 $grey: #747474;
 @import "~react-image-gallery/styles/scss/image-gallery.scss";
@@ -78,10 +79,32 @@ input {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem;
+  padding: 0.8rem;
   word-break: break-word;
+    h6 {
+      display: inline-block;
+      padding: 0.5rem;
+      border: 2px solid #2f2f2f;
+      border-radius: $br;
+      text-shadow: 2px 2px black;
+    }
 }
-
+.footer-title-wrapper {
+  min-height: 3.4rem;
+}
+.footer-katasthma {
+  display: inline-block;
+  padding: 0.4rem;
+  margin-bottom: 0.3rem;
+  border-radius: $br;
+  border: 2px solid #2f2f2f;
+  text-shadow: 2px 2px black;
+}
+@media (max-width: 580px){
+  .footer {
+    grid-template-columns: 100%;
+  }
+}
 .erwthsh-text {
   font-family: 'VAG';
   font-size: 3rem;
@@ -164,13 +187,13 @@ input {
   display: flex;
   flex-direction: column;
   height: 12rem;
-  border: solid 1px #afafaf;
+  border: solid 2px $sShadow;
   border-radius: 12px;
   cursor: pointer;
   &:hover,
   &:active {
     color: $red;
-    border: 1px solid $hShadow;
+    border: 2px solid $hShadow;
     background-color: white;
   }
 }

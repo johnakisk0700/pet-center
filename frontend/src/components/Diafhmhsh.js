@@ -1,6 +1,6 @@
 import AwesomeSlider from 'react-awesome-slider';
 import CoreStyles from 'react-awesome-slider/src/core/styles.scss';
-import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss';
+import AnimationStyles from 'react-awesome-slider/src/styled/fall-animation/fall-animation.scss';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 
 const Diafhmhsh = () => {
@@ -9,7 +9,7 @@ const Diafhmhsh = () => {
         <AutoplaySlider
         play={true}
         interval={3000}
-        animation="foldOutAnimation"
+        animation="fallAnimation"
         cssModule={[CoreStyles, AnimationStyles]}
         an
         className='ad'

@@ -18,6 +18,8 @@ const CatScreen = () => {
                 <MenuRect title='Λεκάνες' img='/menu-photos/cat/lekanes.jpg' url={`${url}/lekanes/proionta`} />
                 <MenuRect title='Cage Μεταφοράς' img='/menu-photos/cat/travelcage.jpg' url={`${url}/travelcage/proionta`} />
                 <MenuRect title='Χτένες - Σαμπουάν' img='/menu-photos/cat/xtenesampouan.jpg' url={`${url}/xtenesampouan/proionta`} />
+                <MenuRect title='Συμπληρώματα Διατροφής' img='/menu-photos/cat/symplhrwmata.jpg' url={`${url}/symplhrwmata/proionta`} />
+                <MenuRect title='Είδη Υγιεινής' img='/menu-photos/cat/ygeia.jpg' url={`${url}/ygeia/proionta`} />
             </Row>
             
         </div>

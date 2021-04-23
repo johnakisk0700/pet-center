@@ -97,6 +97,7 @@ const ProductForm = ({tokenValue}) => {
                             <option value='enydreia'>Ενυδρεία</option>
                             <option value='eksoplismos'>Εξοπλισμός Ενυδρείου</option>
                             <option value='diakosmhtika'>Διακοσμητικά Ενυδρείου</option>
+                            <option value='test'>Τέστ</option>
                             <option disabled style={{color: 'black', fontWeight: '800'}}>Τρωκτικό</option>
                             <option value='ypostrwmata'>Υποστρώματα</option>
                             <option disabled style={{color: 'black', fontWeight: '800'}}>Ερπετό</option>
@@ -122,6 +123,16 @@ const ProductForm = ({tokenValue}) => {
                                 <option value='Gemon'>Gemon</option>
                                 <option value='Amity'>Amity</option>
                                 <option value="Hill's">Hill's</option>
+                                <option value="MANITOBA">MANITOBA</option>
+                                <option value="DAJANA PET">DAJANA PET</option>
+                                <option value="Flourish">Flourish</option>
+                                <option value="OxBow">OxBow</option>
+                                <option value='MIOGATTO'>MIOGATTO</option>
+                                <option value='Mhims'>Mhims</option>
+                                <option value='Vitapol'>Vitapol</option>
+                                <option value='LOLO'>LOLO</option>
+                                <option value='beaphar'>beaphar</option>
+                                <option value='Tetra'>Tetra</option>
 
                             </Form.Control>
                             <div className='d-flex justify-content-center pb-3'>

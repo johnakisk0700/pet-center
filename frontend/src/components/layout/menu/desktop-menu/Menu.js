@@ -32,8 +32,10 @@ const Menu = (props) => {
                         <Category title='Λουριά' url='/gata/louria/proionta'/>
                         <Category title='Cage Μεταφοράς' url='/gata/travelcage/proionta' />
                         <Category title='Κρεβάτια' url='/gata/krevatia/proionta' />
-                        <Category title='Λεκάνες' url='/gata/lekanes/proionta' />
+                        <Category title='Λεκάνες & Άμμοι' url='/gata/lekanes/proionta' />
                         <Category title='Χτένες - Σαμπουάν' url='/gata/xtenesampouan/proionta'/>
+                        <Category title='Συμπληρώματα Διατροφής' url='/gata/symplhrwmata/proionta'/>
+                        <Category title='Είδη Υγιεινής' url='/gata/ygeia/proionta'/>
                     </DropdownMenu>
                 </MenuItem>
                 <MenuItem title='Σκύλος' icon={Dog} url='/skylos'>
@@ -53,6 +55,8 @@ const Menu = (props) => {
                         <Category title='Cage Μεταφοράς' url='/skylos/travelcage/proionta' />
                         <Category title='Κρεβάτια' url='/skylos/krevatia/proionta' />
                         <Category title='Χτένες - Σαμπουάν' url='/skylos/xtenesampouan/proionta'/>
+                        <Category title='Συμπληρώματα Διατροφής' url='/skylos/symplhrwmata/proionta'/>
+                        <Category title='Είδη Υγιεινής' url='/skylos/ygeia/proionta'/>
 
                     </DropdownMenu>
                 </MenuItem>
@@ -65,15 +69,18 @@ const Menu = (props) => {
                         <Category title='Πατήθρες' url='/pthno/patithres/proionta'/>
                         <Category title='Πάτοι Κλουβιών' url='/pthno/patoi/proionta'/>
                         <Category title='Είδη Ζευγαρώματος' url='/pthno/zevgarwma/proionta'/>
+                        <Category title='Παιχνίδια' url='/pthno/paixnidia/proionta'/>
+                        <Category title='Αξεσουάρ' url='/pthno/aksesouar/proionta' />
 
                     </DropdownMenu>
                 </MenuItem>
                 <MenuItem title='Ψάρι' icon={Fish} url='/psari'>
                     <DropdownMenu>
-                        <Category title='Τροφές' url='/psari/trofes/proionta'/>
+                        <Category title='Τροφές - Βελτιωτικά Νερού' url='/psari/trofes/proionta'/>
                         <Category title='Ενυδρεία' url='/psari/enydreia/proionta'/>
                         <Category title='Διακοσμητικά' url='/psari/diakosmhtika/proionta'/>
                         <Category title='Εξοπλισμός Ενυδρείου' url='/psari/eksoplismos/proionta'/>
+                        <Category title='Τέστ' url='/psari/test/proionta'/>
                     </DropdownMenu>
                 </MenuItem>
                 <MenuItem title='Τρωκτικό' icon={Rabbit} url='/trwktiko'>

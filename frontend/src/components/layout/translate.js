@@ -31,7 +31,8 @@ const kathgories = {
     'aksesouar':'Αξεσουάρ',
     'ygeia':'Είδη Υγιεινής',
     'terrarium':'Terrarium',
-    'symplhrwmata':'Συμπληρώματα Διατροφής'
+    'symplhrwmata':'Συμπληρώματα Διατροφής',
+    'test': 'Τέστ'
 }
 const ypokathgories = {
     'kshra': 'Ξηρά',

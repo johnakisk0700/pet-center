@@ -26,7 +26,9 @@ function App() {
         <ScrollToTop />
         {window.location.pathname !== '/adminerino' ? <Header /> : null}
           <div className='content-container'>
-          <Route path='/adminerino' component={AdminScreen} exact />
+            <Suspense fallback={<div style={{marginTop: '15vh'}}><BigLoader /></div>}>
+              <Route path='/adminerino' component={AdminScreen} exact />
+            </Suspense>
             <Container>
               <Suspense fallback={<div style={{marginTop: '15vh'}}><BigLoader /></div>}>
                 <Route path='/' component={HomeScreen} exact />

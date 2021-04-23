@@ -18,7 +18,7 @@
   margin-right: auto;
   background: $black;
   box-shadow: 0 4px 4px $black;
-  border: 2px solid #3c3c3c;
+  border: 2px solid $hGrey;
   max-width: 1400px;
   border-radius: 13px;
 }
@@ -71,11 +71,13 @@
 .dropdownmenu {
   background-color: $black;
   border-radius: 14px;
+  box-shadow: 0 4px 4px $black;
 }
 
 .subdropdownmenu {
   background-color: $black;
   border-radius: 14px;
+  box-shadow: 0 4px 4px $black;
   right: -2%;
   position: relative;
   display: flex;
