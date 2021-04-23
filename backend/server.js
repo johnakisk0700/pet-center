@@ -17,8 +17,6 @@ import expressStaticGzip from 'express-static-gzip'
 
 
 
-
-
 dotenv.config()
 connectDB()
 const app = express()
@@ -28,9 +26,7 @@ const app = express()
 
 
 
-
-
-app.use(express.json())
+app.use(express.json({limit: '50mb'}))
 app.use('/images', express.static('images'))
 // EXPRESS
 
@@ -57,7 +53,7 @@ app.get('/api/product/:id', getProductById)
 app.post('/api/admin/login', authAdmin)
 app.post('/api/admin/add', protect, addProduct)
 app.put('/api/admin/upd', protect, updProduct)
-app.post('/api/admin/addimg', protect, upload.array('images', 5), (req, res) => {
+app.post('/api/admin/addimg', protect, upload.array('images', 10), (req, res) => {
     const imgUrls = []
     req.files.forEach((file) => imgUrls.push(`${file.destination}/${file.filename}`))
     res.json(imgUrls)
