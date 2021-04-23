@@ -2,7 +2,11 @@ import Product from '../models/productModel.js'
 import asyncHandler from 'express-async-handler'
 
 const getProductsByCategory = asyncHandler(async (req, res) => {
-    const products = await Product.find({animal: req.params.animal, category: req.params.category, subcategory: req.params.subcategory}).lean()
+    if(req.params.subcategory !== undefined){
+        const products = await Product.find({animal: req.params.animal, category: req.params.category, subcategory: req.params.subcategory}).lean()
+    }else{
+        const products = await Product.find({animal: req.params.animal, category: req.params.category}).lean()
+    }
     res.json(products)  
 })
 
