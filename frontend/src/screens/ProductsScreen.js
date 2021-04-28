@@ -31,7 +31,7 @@ const ProductScreen = ({match}) => {
     
     
     const [ currentPage, setCurrentPage ] = useState(1)
-    const [ productsPerPage ] = useState(18)
+    const [ productsPerPage ] = useState(20)
     
     
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1279px)' })
@@ -189,7 +189,7 @@ const ProductScreen = ({match}) => {
                 </Row>
                 
                 
-                {filteredProducts.length > 18 && <Pagination filteredProducts={filteredProducts} productsPerPage={productsPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
+                {filteredProducts.length > 20 && <Pagination filteredProducts={filteredProducts} productsPerPage={productsPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
             
             
             </Container>
