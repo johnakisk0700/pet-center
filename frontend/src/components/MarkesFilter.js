@@ -31,7 +31,7 @@ const MarkesFilter = ({filterFood, products, markesFiltra}) => {
                      <div className='invisi-wall' ref={markesRef}>
                     <ClosingHandler filterComp={setMarkesComp}>
                         <div className='markes-filter' >
-                            <h3 className='text-white p-3'>Μάρκες</h3>
+                            <h3 className='text-white p-3'>Εταιρείες</h3>
                             <div className='markes-wrapper'> 
                                 {markes !== undefined ? markes.map((marka, i) =>  
                                     <div className={markesFiltra.includes(marka) ? 'dokimastikoGroup-selected' : 'dokimastikoGroup'} key={i} style={markesFiltra.includes(marka) ? {backgroundColor: '#011627'} : {}}>  

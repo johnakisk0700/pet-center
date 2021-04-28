@@ -31,7 +31,7 @@ const ProductScreen = ({match}) => {
     
     
     const [ currentPage, setCurrentPage ] = useState(1)
-    const [ productsPerPage ] = useState(15)
+    const [ productsPerPage ] = useState(18)
     
     
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1279px)' })
@@ -130,6 +130,7 @@ const ProductScreen = ({match}) => {
                     }
                 }
                 setFilteredProducts([...producterinos])
+                setCurrentPage(1)
                 setLoading(false)
             }).catch(err => {
                 console.log(err)
@@ -188,7 +189,7 @@ const ProductScreen = ({match}) => {
                 </Row>
                 
                 
-                {filteredProducts.length > 15 && <Pagination filteredProducts={filteredProducts} productsPerPage={productsPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
+                {filteredProducts.length > 18 && <Pagination filteredProducts={filteredProducts} productsPerPage={productsPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
             
             
             </Container>

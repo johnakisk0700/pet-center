@@ -6,9 +6,9 @@ const DogFoodScreen = () => {
         <div>
             <Row className='justify-content-center'><h3>Σκύλος</h3></Row>
             <Row className='justify-content-center my-4'>
-                <MenuRect title='Ξηρά Τροφή' img='/menu-photos/dog/dog-food.jpeg' url='/skylos/trofes/kshra/proionta' />
-                <MenuRect title='Υγρή τροφή' img='/menu-photos/dog/dog-food-wet.jpeg' url='/skylos/trofes/ygrh/proionta' />
-                <MenuRect title='Κλινικές Δίαιτες' img='/menu-photos/dog/sterilized.jpeg' url='/gata/trofes/klinikes/proionta' />
+                <MenuRect title='Ξηρά Τροφή' img='/menu-photos/dog/dog-food.jpg' url='/skylos/trofes/kshra/proionta' />
+                <MenuRect title='Υγρή τροφή' img='/menu-photos/dog/dog-food-wet.jpg' url='/skylos/trofes/ygrh/proionta' />
+                <MenuRect title='Κλινικές Δίαιτες' img='/menu-photos/dog/klinikes.png' url='/skylos/trofes/klinikes/proionta' />
             </Row>
         </div>
     )

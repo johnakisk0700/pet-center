@@ -9,7 +9,7 @@ const DogScreen = () => {
             <Row className='justify-content-center'><h3>Σκύλος</h3></Row>
             <Row className='justify-content-center my-4'>
                 <MenuRect title='Τροφές' img='/menu-photos/dog/dog-food.jpg' url={`${url}/trofes`} />
-                <MenuRect title='Λιχουδιές' img='/menu-photos/dog/lixoudies.jpg' url={`${url}/lixoudies/proionta`} />
+                <MenuRect title='Λιχουδιές' img='/menu-photos/dog/lixoudies.png' url={`${url}/lixoudies/proionta`} />
                 <MenuRect title='Κόκκαλα' img='/menu-photos/dog/kokkala.jpg' url={`${url}/kokkala/proionta`} />
                 <MenuRect title='Παιχνίδια' img='/menu-photos/dog/paixnidia.jpg' url={`${url}/paixnidia/proionta`} />
                 <MenuRect title='Μπωλ' img='/menu-photos/cat/mpwl.jpg' url={`${url}/mpwl/proionta`} />

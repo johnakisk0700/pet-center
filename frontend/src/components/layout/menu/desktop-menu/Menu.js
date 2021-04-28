@@ -68,7 +68,6 @@ const Menu = (props) => {
                         <Category title='Ποτίστρες' url='/pthno/potistres/proionta'/>
                         <Category title='Πατήθρες' url='/pthno/patithres/proionta'/>
                         <Category title='Πάτοι Κλουβιών' url='/pthno/patoi/proionta'/>
-                        <Category title='Είδη Ζευγαρώματος' url='/pthno/zevgarwma/proionta'/>
                         <Category title='Παιχνίδια' url='/pthno/paixnidia/proionta'/>
                         <Category title='Αξεσουάρ' url='/pthno/aksesouar/proionta' />
 

@@ -14,8 +14,11 @@ const Diafhmhsh = () => {
         an
         className='ad'
       >
-        <div data-src='/diafhmiseis/gatodentra.jpg' alt='PEP' />
-        <div data-src='/diafhmiseis/gati_xarti.jpg' alt='PEP' />
+        <div data-src='/diafhmiseis/1.png' alt='PEP' />
+        <div data-src='/diafhmiseis/2.jpg' alt='PEP' />
+        <div data-src='/diafhmiseis/3.png' alt='PEP' />
+        <div data-src='/diafhmiseis/4.png' alt='PEP' />
+        <div data-src='/diafhmiseis/5.jpg' alt='PEP' />
       </AutoplaySlider>
     )
 }

@@ -14,7 +14,6 @@ const BirbScreen = () => {
                 <MenuRect title='Ποτίστρες' img='/menu-photos/birb/potistres.jpg' url={`${url}/potistres/proionta`} />
                 <MenuRect title='Πατήθρες' img='/menu-photos/birb/patithres.jpg' url={`${url}/patithres/proionta`} />
                 <MenuRect title='Πάτοι Κλουβιών' img='/menu-photos/birb/patoi.jpg' url={`${url}/patoi/proionta`} />
-                <MenuRect title='Είδη Ζευγαρώματος' img='/menu-photos/birb/zevgarwma.jpg' url={`${url}/zevgarwma/proionta`} />
                 <MenuRect title='Παιχνίδια' img='/menu-photos/birb/paixnidia.jpg' url={`${url}/paixnidia/proionta`} />
                 <MenuRect title='Αξεσουάρ' img='/menu-photos/birb/aksesouar.jpg' url={`${url}/aksesouar/proionta`} />
             </Row>

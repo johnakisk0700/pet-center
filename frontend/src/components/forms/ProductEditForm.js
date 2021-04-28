@@ -174,6 +174,9 @@ const ProductForm = ({tokenValue, preloadedData}) => {
                                 <option value='LOLO'>LOLO</option>
                                 <option value='beaphar'>beaphar</option>
                                 <option value='Tetra'>Tetra</option>
+                                <option value='Puik'>Puik</option>
+                                <option value='CHIPSI'>CHIPSI</option>
+                                <option value='Tartafood'>Tartafood</option>
                             </Form.Control>
                             <div className='d-flex justify-content-center pb-3'>
                                 <Form.Check
