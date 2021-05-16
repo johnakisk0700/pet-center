@@ -10,8 +10,7 @@ import { protect } from './middleware/authMiddleware.js'
 import connectDB from './config/db.js'
 import multer from 'multer'
 import fs from 'fs'
-import expressStaticGzip from 'express-static-gzip'
-
+import compression from 'compression'
 
 
 
@@ -28,6 +27,17 @@ const app = express()
 
 app.use(express.json({limit: '50mb'}))
 app.use('/images', express.static('images'))
+app.use(compression({ filter: shouldCompress }))
+ 
+function shouldCompress (req, res) {
+  if (req.headers['x-no-compression']) {
+    // don't compress responses with this request header
+    return false
+  }
+ 
+  // fallback to standard filter function
+  return compression.filter(req, res)
+}
 // EXPRESS
 
 var storage = multer.diskStorage({
@@ -45,6 +55,7 @@ var storage = multer.diskStorage({
         cb(null, req.body.pid + '-' + Date.now() + Math.floor(Math.random() * 10000) + path.extname(file.originalname))
     }
   })
+
 var upload = multer({ storage: storage })
 //to routing tha ginei topika giati einai mono gia products kai 1 admin
 app.get('/api/products/:animal/:category/:subcategory?', getProductsByCategory)
@@ -72,14 +83,7 @@ app.post('/api/admin/delprev', protect, asyncHandler( async(req, res) => {
 
 // AYTA EINAI NA TA VALW STO TELOS STO PRODUCTION GIA NA DEIXNEI TO PAYGE
 const __dirname = path.resolve()
-app.use(expressStaticGzip(path.join(__dirname, 'frontend' , 'build'), {
-    enableBrotli: true,
-    customCompressions: [{
-        encodingName: 'deflate',
-        fileExtension: 'zz'
-    }],
-    orderPreference: ['br']
-}))
+app.use(express.static(path.join(__dirname, 'frontend' , 'build')))
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
 })
