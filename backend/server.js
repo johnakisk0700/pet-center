@@ -11,7 +11,7 @@ import connectDB from './config/db.js'
 import multer from 'multer'
 import fs from 'fs'
 import compression from 'compression'
-
+import cors from 'cors'
 
 
 
@@ -24,7 +24,7 @@ const app = express()
 
 
 
-
+app.use(cors())
 app.use(express.json({limit: '50mb'}))
 app.use('/images', express.static('images'))
 app.use(compression({ filter: shouldCompress }))
