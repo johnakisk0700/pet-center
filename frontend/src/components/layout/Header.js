@@ -27,7 +27,8 @@ const Header = () => {
     return (
 
 
-            <>    
+            <>
+                <div className='bg'></div>    
                     {isTablet && <>
                         <CSSTransition
                         in={!isDrop}
