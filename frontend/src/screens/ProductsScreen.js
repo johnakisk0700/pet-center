@@ -18,6 +18,8 @@ const ColorFilterDesk = lazy(()=>import('../components/ColorFilterDesk.js'))
 
 
 const ProductScreen = ({match}) => {
+    const params = match.params
+    
     const [ products, setProducts ] = useState([])
     const [ filteredProducts, setFilteredProducts ] = useState([])
     
@@ -29,15 +31,19 @@ const ProductScreen = ({match}) => {
     const [ loading, setLoading ] = useState(false)
     
     
-    
+    if(params.category === 'trofes' || params.category === 'louria'){
+        var prodPerPage = 30;
+    }else{
+        var prodPerPage = 18;
+    }
     const [ currentPage, setCurrentPage ] = useState(1)
-    const [ productsPerPage ] = useState(20)
+    const [ productsPerPage ] = useState(prodPerPage)
     
     
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1279px)' })
     const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1280px)'})
     
-    const params = match.params
+    
     
     const scrollTop = () => {      
         document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
@@ -179,7 +185,7 @@ const ProductScreen = ({match}) => {
                 </> : <></>}
                 
                 
-                <Row xs={1} sm={2} md={3} lg={4} xl={params.category === 'trofes' || params.category === 'louria' ? 5 : 6} className='products-wrapper'>
+                <Row xs={1} sm={2} md={3} lg={3} xl={params.category === 'trofes' || params.category === 'louria' ? 5 : 6} className='products-wrapper'>
                     {currentProducts.map((product)=>{
                         return(
                             <Product match={match} product={product} key={product.pid}/>
@@ -189,7 +195,7 @@ const ProductScreen = ({match}) => {
                 </Row>
                 
                 
-                {filteredProducts.length > 20 && <Pagination filteredProducts={filteredProducts} productsPerPage={productsPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
+                {filteredProducts.length > 24 && <Pagination filteredProducts={filteredProducts} productsPerPage={productsPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
             
             
             </Container>

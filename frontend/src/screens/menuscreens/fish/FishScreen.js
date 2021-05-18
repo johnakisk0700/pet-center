@@ -6,7 +6,7 @@ const FishScreen = () => {
     let { url } = useRouteMatch();
 
     return (
-        <div>
+        <div className='actual-screen'>
             <Row className='justify-content-center'><h3>Ψάρι</h3></Row>
             <Row className='justify-content-center my-4'>
                 <MenuRect title='Τροφές - Βελτιωτικά Νερού' img='/menu-photos/fish/trofes.png' url={`${url}/trofes/proionta`} />

@@ -3,7 +3,7 @@ import { Row } from 'react-bootstrap';
 
 const CatFoodScreen = () => {
     return (
-        <div>
+        <div className='actual-screen'>
             <Row className='justify-content-center'><h3>Γατοτροφές</h3></Row>
             <Row className='justify-content-center my-4'>
                 <MenuRect title='Ξηρά Τροφή' img='/menu-photos/cat/cat-food.jpg' url='/gata/trofes/kshra/proionta' />

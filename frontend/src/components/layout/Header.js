@@ -29,7 +29,8 @@ const Header = () => {
 
             <>
                 <div className='bg'></div>
-                <div className='container bg-kallyma'></div>    
+                <div className='container bg-kallyma'></div>
+                <div className='container bg-kallyma2'></div>    
                     {isTablet && <>
                         <CSSTransition
                         in={!isDrop}

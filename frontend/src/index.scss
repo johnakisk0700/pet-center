@@ -44,19 +44,20 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: -1;
+  z-index: -3;
   background: url('./components/layout/bg.svg');
   opacity: 0.1;
 }
 .bg-kallyma {
   height: 100%;
   position: fixed;
-  z-index: -1;
-  background: white;
-  opacity: 0.4;
+  z-index: -2;
+  background: $bg;
+  opacity: 0.25;
   left: 0;
   right: 0;
 }
+
 ul {
   list-style: none;
   margin-bottom: 0;
@@ -66,12 +67,12 @@ input {
   }
 
 .page-container {
-  min-height: 100vh;
+  min-height: 105vh;
   position: relative;
 }
 
 .content-container {
-  padding-bottom: 40rem;
+  padding-bottom: 50rem;
   padding-top: 3.5rem;
 }
 
@@ -86,11 +87,10 @@ input {
 
 .footer {
   display: grid;
-  grid-template-columns: 49% 2% 49%;
+  grid-template-columns: 1fr 1fr;
   background-color: $black;
   box-shadow: 0 2px 6px #2f2f2f;
   color: white;
-  border-radius: 12px 12px 0 0;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -102,21 +102,41 @@ input {
     h6 {
       display: inline-block;
       padding: 0.5rem;
-      border: 2px solid #2f2f2f;
-      border-radius: $br;
-      text-shadow: 2px 2px black;
     }
+    img {
+      width: 60%;
+      border-radius: $br;
+    }
+    iframe {
+      border-radius: 12px;
+      max-width: 90%;
+    }
+}
+@media (max-width: 567px) {
+  .footer {
+    img {
+      visibility: hidden;
+    }
+  }
 }
 .footer-title-wrapper {
   min-height: 3.4rem;
+  h6 {
+    padding: 0.4rem;
+    margin-bottom: 0.3rem;
+    border-radius: $br;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
 }
 .footer-katasthma {
   display: inline-block;
   padding: 0.4rem;
-  margin-bottom: 0.3rem;
-  border-radius: $br;
-  border: 2px solid #2f2f2f;
-  text-shadow: 2px 2px black;
+  border-radius: $br $br 0 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  position: relative;
+  background: $red;
 }
 @media (max-width: 580px){
   .footer {
@@ -125,7 +145,7 @@ input {
 }
 .erwthsh-text {
   font-family: 'VAG';
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
 }
 
@@ -133,7 +153,10 @@ input {
   width: 50%;
   max-width: 100px;
 }
-
+.zwakia {
+  margin-bottom: 8rem;
+  margin-top: 5rem;
+}
 .zwaki {
   color: $black;
   height: 12rem;
@@ -142,22 +165,25 @@ input {
     cursor: pointer;
   }
 
-  &:hover img,
-  &:active img {
-    transform: scale(1.05);
-  }
+  
 
   &:hover .zwaki-img-wrapper,
   &:active .zwaki-img-wrapper {
-    background-color: $black;
+    box-shadow: 0 0 20px -4px $hShadow;
+    transform: translateY(-3px);
+    background: rgb(255, 255, 255);
+  }
+  &:hover .zwaki-title {
+    color: $red;
   }
 }
 
 .zwaki-title {
   margin-top: 0.3rem;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 600;
   position: relative;
+  font-family: 'VAG';
 }
 
 .zwaki-img-wrapper {
@@ -170,7 +196,8 @@ input {
   left: 0;
   right: 0;
   margin: 0 auto;
-  border: solid 0.2rem $black;
+  background-color: rgba(255, 255, 255, 0.739);
+  box-shadow: 0 0 12px $sShadow;
   border-radius: 50%;
   overflow: hidden;
   transition: 0.15s ease;
@@ -205,10 +232,6 @@ input {
   display: flex;
   flex-direction: column;
   height: 12rem;
-  border-top: 3px solid white;
-  border-right: 1px solid white;
-  border-bottom: 3px solid white;
-  border-left: 1px solid white;
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
@@ -217,11 +240,8 @@ input {
   &:hover,
   &:active {
     color: $red;
-    border-top: 3px solid $black;
-    border-right: 1px solid $black;
-    border-bottom: 3px solid $black;
-    border-left: 1px solid $black;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
   }
 }
 
@@ -531,6 +551,11 @@ input {
     padding-top: 13vh !important;
   }
 }
+@media (max-width: 576px) {
+  .content-container {
+    padding-bottom: 80rem;
+  }
+}
 @media (max-width: 768px){
   .image-gallery-thumbnail.active, .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus{
     border-radius: $br;
@@ -544,4 +569,9 @@ input {
 
 .awssld__wrapper {
   border-radius: $br;
+  box-shadow: 0 0 12px $sShadow;
+}
+
+.actual-screen {
+  min-height: 100vh;
 }

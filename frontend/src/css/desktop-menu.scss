@@ -2,7 +2,8 @@
   background-color: $black;
   box-shadow: 0 0 12px 2px $hShadow;
   color: white;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 10px 10px;
+  
   max-height: 12rem;
   position: sticky;
   top: -10.6rem;
@@ -18,9 +19,9 @@
   margin-right: auto;
   background: $black;
   box-shadow: 0 3px 12px $hShadow;
-  border: 2px solid $hGrey;
+  border: 1px solid white;
   max-width: 1400px;
-  border-radius: 13px;
+  border-radius: 10px;
 }
 
 .ts-navbar-nav {
@@ -49,7 +50,7 @@
 }
 
 .menu-icon {
-  height: 1.8rem;
+  max-height: 1.8rem;
   margin-right: 0.2rem;
 }
 
@@ -134,14 +135,10 @@
   border-radius: $br;
   margin-right: 1rem;
   text-align: center;
-  box-shadow: 0px 0px 12px $sShadow;
+  box-shadow: 0px 0px 20px -4px $hShadow;
   height: fit-content;
   position: sticky;
   top: 2rem;
-  border-top: 3px solid $black;
-  border-right: 1px solid $black;
-  border-bottom: 3px solid $black;
-  border-left: 1px solid $black;
   
   .dokimastikoGroup {
     &:hover {
@@ -149,8 +146,23 @@
     }
   }
   h3{
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     color: black;
+    position: relative;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: -0.75rem;
+      height: 1px;
+      width: 70%;
+      background-color: $red;
+      opacity: 0.2;
+    }
   }
 }
 @media (min-width: 768px){

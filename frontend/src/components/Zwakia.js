@@ -4,7 +4,7 @@ import Decor from './layout/menu/svg-icons/decor-01.svg';
 
 const Zwakia = () => {
     return (
-        <Container className='d-flex flex-column'>
+        <Container className='d-flex flex-column zwakia'>
             <Row className='justify-content-center'>
                 <Col className='decor-img-wrapper text-right my-auto d-none d-md-block'>
                     <img  src={Decor} alt='' />
@@ -17,12 +17,12 @@ const Zwakia = () => {
                 </Col>  
             </Row>
             <Row className='justify-content-center' md={4} lg={4} xl={5} sm={3} xs={1}>  
-                <Zwaki title='Γάτα' img='/photos-cropped/gatos.png' url='/gata'/>
-                <Zwaki title='Σκύλος' img='/photos-cropped/skylos.png' url='/skylos'/>
-                <Zwaki title='Πτηνό' img='/photos-cropped/birb.png' url='/pthno'/>
-                <Zwaki title='Ψάρι' img='/photos-cropped/psari.png' url='/psari'/>
-                <Zwaki title='Τρωκτικό' img='/photos-cropped/kouneli.png' url='/trwktiko'/>
-                <Zwaki title='Ερπετό' img='/photos-cropped/erpeto.png' url='/erpeto' diorthwsh={{right: '-30%', top: '20%'}}/>
+                <Zwaki title='Γατα' img='/photos-cropped/gatos.png' url='/gata'/>
+                <Zwaki title='Σκυλος' img='/photos-cropped/skylos.png' url='/skylos'/>
+                <Zwaki title='Πτηνο' img='/photos-cropped/birb.png' url='/pthno'/>
+                <Zwaki title='Ψαρι' img='/photos-cropped/psari.png' url='/psari'/>
+                <Zwaki title='Τρωκτικο' img='/photos-cropped/kouneli.png' url='/trwktiko'/>
+                <Zwaki title='Ερπετο' img='/photos-cropped/erpeto.png' url='/erpeto' diorthwsh={{right: '-30%', top: '20%'}}/>
             </Row>  
         </Container>
     )

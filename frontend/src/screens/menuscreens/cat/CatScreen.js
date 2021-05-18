@@ -5,7 +5,7 @@ import { useRouteMatch } from 'react-router-dom';
 const CatScreen = () => {
     let { url } = useRouteMatch();
     return (
-        <div>
+        <div className='actual-screen'>
             <Row className='justify-content-center'><h3>Γάτα</h3></Row>
             <Row className='justify-content-center my-4'>
                 <MenuRect title='Τροφές' img='/menu-photos/cat/cat-food.jpg' url={`${url}/trofes`} />
