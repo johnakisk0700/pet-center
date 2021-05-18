@@ -112,6 +112,7 @@
   height: 100%;
   background-color: $black;
   text-align: center;
+  z-index: 255;
     ::-webkit-scrollbar{
       width: 0px;
       background: transparent
@@ -132,7 +133,7 @@
 .markes-button {
   transition: all 0.20s;
   font-size: 1.2rem;
-  z-index: 10;
+  z-index: 170;
   cursor: pointer;
   display: block;
   position: fixed;
@@ -159,7 +160,7 @@
   top: 0;
   width: 45%;
   height: 100vh;
-  z-index: 20;
+  z-index: 170;
   transition: all 150ms;
 }
 
@@ -169,7 +170,7 @@
   width: 100vw;
   top: 0;
   right: 0;
-  z-index: 15;
+  z-index: 165;
 }
 
 @media (max-width: 580px) {

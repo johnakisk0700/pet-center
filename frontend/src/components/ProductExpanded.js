@@ -27,7 +27,7 @@ const ProductExpanded = ({product}) => {
                     <ImageGallery items={myImages} showPlayButton={false} showNav={showNav} showIndex={showNav} showFullscreenButton={showNav} slideDuration={250} onClick={() => _onImageClick(galleryRef)} ref={galleryRef}/>
                 </Col>
                 <Col className='text-center mt-5'>
-                    <h3>{product.name}</h3>
+                    <h2>{product.name}</h2>
                     <i>Κωδικός:</i> <p>#{product.pid}</p>
                     <i>Περιγραφή:</i> <p style={{whiteSpace: 'pre-line'}}>{product.description}</p>
                     <i>Μεγέθη:</i>

@@ -1,6 +1,6 @@
 .header {
   background-color: $black;
-  box-shadow: 0 4px 4px $hShadow;
+  box-shadow: 0 0 12px 2px $hShadow;
   color: white;
   border-radius: 0 0 12px 12px;
   max-height: 12rem;
@@ -17,7 +17,7 @@
   margin-left: auto;
   margin-right: auto;
   background: $black;
-  box-shadow: 0 4px 4px $black;
+  box-shadow: 0 3px 12px $hShadow;
   border: 2px solid $hGrey;
   max-width: 1400px;
   border-radius: 13px;
@@ -36,6 +36,11 @@
   color: white;
   border-radius: 11px;
   padding: 0.4rem 2rem;
+  font-weight: 300;
+  .zwo-title {
+    margin: auto 0.1rem;
+    transform: translateY(-1px);
+  }
 }
 
 .menu-item:hover {
@@ -44,7 +49,7 @@
 }
 
 .menu-icon {
-  max-height: 1.8rem;
+  height: 1.8rem;
   margin-right: 0.2rem;
 }
 
@@ -71,13 +76,13 @@
 .dropdownmenu {
   background-color: $black;
   border-radius: 14px;
-  box-shadow: 0 4px 4px $black;
+  box-shadow: 0 0px 12px $hShadow;
 }
 
 .subdropdownmenu {
   background-color: $black;
   border-radius: 14px;
-  box-shadow: 0 4px 4px $black;
+  box-shadow: 0 0px 12px $hShadow;
   right: -2%;
   position: relative;
   display: flex;
@@ -125,16 +130,27 @@
   grid-template-columns: 18% 80%;
 }
 .markes-filter-desk {
-  background-color: $black;
+  background-color: white;
   border-radius: $br;
   margin-right: 1rem;
   text-align: center;
-  box-shadow: 0px 4px 4px $hShadow;
+  box-shadow: 0px 0px 12px $sShadow;
   height: fit-content;
   position: sticky;
   top: 2rem;
+  border-top: 3px solid $black;
+  border-right: 1px solid $black;
+  border-bottom: 3px solid $black;
+  border-left: 1px solid $black;
+  
+  .dokimastikoGroup {
+    &:hover {
+      box-shadow: 0 0 12px -2px $sShadow;
+    }
+  }
   h3{
     font-size: 1.2rem;
+    color: black;
   }
 }
 @media (min-width: 768px){

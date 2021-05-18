@@ -19,7 +19,7 @@ const MarkesFilter = ({filterFood, products, markesFiltra}) => {
     return (
         <div>
             <div className={markesFiltra.length > 0 ? 'markes-button active-filter' : 'markes-button'} onClick={() => setMarkesComp(true)} style={markesComp ? {transform: 'translateX(150%)'} : {}}>
-                Μάρκες {markesFiltra.length > 0 ? <img src='/tick.svg'></img> : ''}
+                Εταιρείες {markesFiltra.length > 0 ? <img src='/tick.svg'></img> : ''}
             </div>
                 <CSSTransition
                 in={markesComp}
