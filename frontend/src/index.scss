@@ -103,9 +103,11 @@ input {
       display: inline-block;
       padding: 0.5rem;
     }
-    img {
-      width: 60%;
+    .foo-logo {
+      width: 25%;
+      margin: auto;
       border-radius: $br;
+      grid-column-end: span 2;
     }
     iframe {
       border-radius: 12px;
@@ -114,8 +116,15 @@ input {
 }
 @media (max-width: 567px) {
   .footer {
-    img {
-      visibility: hidden;
+    .foo-logo {
+      display: none;
+    }
+  }
+}
+@media (max-width: 1279px) {
+  .footer {
+    .foo-logo {
+      width: 45%
     }
   }
 }
@@ -137,6 +146,10 @@ input {
   font-weight: 700;
   position: relative;
   background: $red;
+}
+.footer-svg {
+  max-height: 1.5rem;
+  max-width: 1.5rem;
 }
 @media (max-width: 580px){
   .footer {
@@ -574,4 +587,22 @@ input {
 
 .actual-screen {
   min-height: 100vh;
+}
+
+.wrario {
+  display: grid;
+  gap: 0.25rem;
+  width: fit-content;
+  margin: auto;
+  div {
+    color: #9ea9b6;
+    justify-self: center;
+    padding: 0.25rem;
+  }
+  span {
+    color: white;
+    justify-self: end;
+    padding: 0.25rem;
+    font-size: 1.05rem;
+  }
 }

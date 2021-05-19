@@ -18,8 +18,7 @@
   margin-left: auto;
   margin-right: auto;
   background: $black;
-  box-shadow: 0 3px 12px $hShadow;
-  border: 1px solid white;
+  box-shadow: 0 0px 2px 0px #ffffff59;
   max-width: 1400px;
   border-radius: 10px;
 }
@@ -47,6 +46,7 @@
 .menu-item:hover {
   background: $red;
   cursor: pointer;
+  box-shadow: 0 0px 2px 0px #ffffff59;
 }
 
 .menu-icon {
@@ -96,11 +96,11 @@
   border-radius: 13px;
   padding: 0.8rem;
   text-decoration: none;
-  
 }
 
 .subdropdownmenu a:hover {
   background-color: $red;
+  box-shadow: 0 0px 2px 0px #ffffff59;
 }
 
 .dropdowncategory {
@@ -109,6 +109,7 @@
 
   &:hover {
     background-color: $red;
+    box-shadow: 0 0px 2px 0px #ffffff59;
   }
 
   &:hover .arrow-wrapper {
