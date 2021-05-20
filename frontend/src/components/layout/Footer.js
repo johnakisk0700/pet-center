@@ -2,11 +2,15 @@ import { Container } from 'react-bootstrap';
 import  PetLogo  from './logo-pet-center.svg'
 import Here from './map.svg'
 import Phone from './phone.svg'
+import FbButton from './FbButton'
+import InstaButton from './InstaButton'
+import PhoneButton from './PhoneButton'
+
 
 const Footer = () => {
     return (
         <>
-            <div className='footer'>
+            <div className='footer' id='footer'>
                     <img className='foo-logo' src={PetLogo} alt='petcenter logo'></img>
                     <div className='text-center py-3'>
                          
@@ -22,18 +26,26 @@ const Footer = () => {
                         <div className='text-light'><img className='footer-svg' src={Here} alt='phone image' />  Ακρωτηρίου 77, Πάτρα, 26500</div>
                         <div className='text-light'><img className='footer-svg' src={Phone} alt='phone image' />  2610-340111</div> 
                     </div>
+                    
                     <div className='text-center py-3'>
+                        
                         <div className='footer-title-wrapper'>    
                             <h6>Ωράριο Λειτουργίας</h6>
                         </div>
+                        
                         <div className='wrario'>
-                            <div><span>Δευ</span>&nbsp; 9:00-15:00</div>
-                            <div><span>Τρi</span>&nbsp; 9:00-14:30, 17:30-21:00</div>
-                            <div><span>Τετ</span>&nbsp; 9:00-15:00</div>
-                            <div><span>Πεμ</span>&nbsp; 9:00-14:30, 17:30-21:00</div>
-                            <div><span>Παρ</span>&nbsp; 9:00-14:30, 17:30-21:00</div>
-                            <div><span>Σαβ</span>&nbsp; 9:00-15:00</div>
-                            <div><span>Κυρ</span>&nbsp; Κλειστά</div>
+                            <span>Δευ</span><div>&nbsp; 9:00-15:00</div>
+                            <span>Τρi</span><div>&nbsp; 9:00-14:30, 17:30-21:00</div>
+                            <span>Τετ</span><div>&nbsp; 9:00-15:00</div>
+                            <span>Πεμ</span><div>&nbsp; 9:00-14:30, 17:30-21:00</div>
+                            <span>Παρ</span><div>&nbsp; 9:00-14:30, 17:30-21:00</div>
+                            <span>Σαβ</span><div>&nbsp; 9:00-15:00</div>
+                            <span>Κυρ</span><div>&nbsp; Κλειστά</div>
+                        </div>
+                        <div className='social-media'>
+                            <div>Βρείτε μας στα social media:</div>
+                            <FbButton />
+                            <InstaButton />
                         </div>                    
                     </div>
             </div>

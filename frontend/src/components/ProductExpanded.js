@@ -2,6 +2,9 @@ import { Row, Col } from 'react-bootstrap'
 import ImageGallery from 'react-image-gallery'
 import {xrwmata} from './layout/translate'
 import { useState, useRef } from 'react'
+import PhoneButton from './layout/PhoneButton'
+
+
 const ProductExpanded = ({product}) => {
     const [ showNav, setShowNav ] = useState(false)
     const [ isFullScreen, setIsFullScreen ] = useState(false) 
@@ -55,8 +58,10 @@ const ProductExpanded = ({product}) => {
                             }
                             })}
                         </Row>
-                    </>} 
+                    </>}
+                    <PhoneButton title='Για πληροφορίες και παραγγελίες καλέστε μας' /> 
                 </Col>
+                
             </Row>
         </div>
     )

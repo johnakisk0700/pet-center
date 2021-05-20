@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react'
 import Xarths from '../components/Xarths'
 import ProductExpanded from '../components/ProductExpanded'
 import BigLoader from '../components/BigLoader'
-const ProductScreen = ({match}) => {
+
+
+const ProductScreen = ({ match }) => {
     const [ product, setProduct ] = useState({})
     const [ loading, setLoading ] = useState(false)
 
