@@ -600,8 +600,8 @@ input {
     margin: auto;
     padding: 0.25rem;
     border-radius: $br;
-    background: #4e5d6c;
-    border: 2px solid rgba(255, 255, 255, 0.212);
+    background: rgb(255 255 255 / 33%);
+    border: 2px solid #4e5d6c8f;
     div {
         color: #9ea9b6;
         justify-self: center;
