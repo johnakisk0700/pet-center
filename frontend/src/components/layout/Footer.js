@@ -16,7 +16,7 @@ const Footer = () => {
                          
                         <div className='footer-title-wrapper'>    
                             <h6>Πληροφορίες Καταστημάτων</h6>
-                        </div><br></br>
+                        </div>
                         <div className='footer-katasthma'>Κατάστημα 1:</div><br></br>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12532.368906857966!2d21.742454!3d38.254167!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135e4917593f19f7%3A0xa97815136109f165!2sPet%20Center%20Patras!5e0!3m2!1sen!2sgr!4v1621362770168!5m2!1sen!2sgr" title='odos1' style={{border: '0'}} allowfullscreen="" loading="lazy"></iframe>
                         <div className='text-light'><img className='footer-svg' src={Here} alt='phone image' /> Κωνσταντινουπόλεως 53, Πάτρα, 26441</div>
