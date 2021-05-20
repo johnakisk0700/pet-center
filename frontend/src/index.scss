@@ -625,7 +625,7 @@ input {
 
 .diafhmish {
     display: grid;
-    grid-template-columns: 60% 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 4rem;
     border-radius: $br;
@@ -641,10 +641,8 @@ input {
     gap: 1rem;
 }
 .epikoinwnia-btn {
-    display: grid;
-    grid-template-columns: 1.5rem 1fr;
+    display: flex;
     align-items: center;
-    gap: 1rem;
     padding: 0.75rem;
     font-size: 1.05rem;
     border-radius: $br;
@@ -652,6 +650,16 @@ input {
     box-shadow: 0 0 12px $sShadow;
     cursor: pointer;
     text-decoration: none;
+    justify-content: center;
+    position: relative;
+    img {
+      position: absolute;
+      left: 0.75rem;
+      width: 1.5rem;
+    }
+    div {
+      margin: 0 2.25rem;
+    }
 }
 
 .fb {
