@@ -30,11 +30,10 @@ const ProductScreen = ({match}) => {
     
     const [ loading, setLoading ] = useState(false)
     
-    
+    var prodPerPage = 18;
+
     if(params.category === 'trofes' || params.category === 'louria'){
-        var prodPerPage = 30;
-    }else{
-        var prodPerPage = 18;
+        prodPerPage = 30;
     }
     const [ currentPage, setCurrentPage ] = useState(1)
     const [ productsPerPage ] = useState(prodPerPage)

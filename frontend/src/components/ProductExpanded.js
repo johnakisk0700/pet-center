@@ -59,7 +59,7 @@ const ProductExpanded = ({product}) => {
                             })}
                         </Row>
                     </>}
-                    <PhoneButton title='Για πληροφορίες και παραγγελίες καλέστε μας' /> 
+                    <PhoneButton title='Για πληροφορίες προϊόντος' /> 
                 </Col>
                 
             </Row>
